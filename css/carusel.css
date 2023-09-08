@@ -1,0 +1,135 @@
+:root {
+    --purple-gradient: linear-gradient(130deg, rgba(162,153,242,1) 0%, rgba(221,172,253,1) 100%);
+    --blue-gradient: linear-gradient(130deg, rgba(2,107,165,1) 0%, rgba(66,168,208,1) 100%);
+    --orange-gradient: linear-gradient(130deg, rgba(252,196,197,1) 0%, rgba(255,176,177,1) 100%);
+}
+
+.carusel {
+    font-size: 1rem;
+    width: 100%;
+    height: 25em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    cursor: pointer;
+}
+
+.carusel > .pickup{
+    background: var(--purple-gradient);
+}
+
+.carusel > .measure{
+    background: var(--orange-gradient);
+}
+
+.carusel > .delivery{
+    background: var(--blue-gradient);
+}
+
+.carusel > .carusel-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* transition: transform 100ms ease-out; */
+}
+
+.carusel > .carusel-block > div {
+    font-size: 4em;
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    color: var(--white-color);
+    width: 6em;
+    text-align: right;
+    pointer-events: none;
+}
+
+.carusel > .carusel-block > a {
+    position: absolute;
+    right: 10em;
+    bottom: 2.5em;
+    color: var(--white-color);
+    width: 8em;
+    text-align: center;
+    padding: .6em 0;
+    font-weight: 600;
+    transition: color 100ms ease;
+    border-radius: 4px;
+}
+
+.carusel > .carusel-block > a:hover {
+    color: var(--black-color);
+}
+
+.carusel > .carusel-block > img {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 25em);
+    pointer-events: none;
+}
+
+.carusel > .circles {
+    position: absolute;
+    width: 2.8em;
+    left: calc(50% - 1.4em);
+    bottom: 0.5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.carusel > .circles > div {
+    min-width: .5em;
+    max-width: .5em;
+    min-height: .5em;
+    max-height: .5em;
+    background-color: var(--black-color);;
+    border-radius: 1.5em;
+    opacity: .5;
+}
+
+@media (max-width: 980px) {
+    .carusel > .carusel-block > div {
+        width: 5em;
+        font-size: 3em;
+    }
+
+    .carusel > .carusel-block > img {
+        left: calc(50% - 16em);
+    }
+}
+
+@media (max-width: 630px) {
+
+    .carusel > .carusel-block > img {
+        left: calc(50% - 7.5em);
+        transform-origin: left bottom;
+        transform: scale(.8);
+    }
+
+    .carusel > .carusel-block > div {
+        font-size: 2em;
+        width: 8em;
+        left: calc(50% - 4em);
+        top: 0.5em;
+    }
+
+    .carusel > .carusel-block > a {
+        left: calc(50% - 4em);
+        background-color: red;
+    }
+
+    .carusel > .carusel-block > a:hover {
+        color: var(--white-color);
+        filter: brightness(200%);
+    }
+}
