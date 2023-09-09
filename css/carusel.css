@@ -20,6 +20,8 @@
     user-select: none; /* Standard */
 
     cursor: pointer;
+
+    margin-top: 2em;
 }
 
 .carusel > .pickup{
@@ -109,7 +111,6 @@
 }
 
 @media (max-width: 630px) {
-
     .carusel > .carusel-block > img {
         left: calc(50% - 7.5em);
         transform-origin: left bottom;

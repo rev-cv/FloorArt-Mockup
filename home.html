@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>ПОЛАРТ.РФ | Главная</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/variables.css">
     <link rel="stylesheet" type="text/css" href="css/frame.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/carusel.css">
+    <link rel="stylesheet" type="text/css" href="css/page-home-content.css">
 
     <script src="js/sprite-svg.js" defer></script>
     <script src="js/header.js" defer></script>
     <script src="js/carusel.js" defer></script>
+    <script src="js/cards.js" defer></script>
+    <script src="js/combo-box.js" defer></script>
 </head>
 <body>
 
     <!-- HEADER -->
     
     <header>
-
-        
-
 
         <div class="head-menu">
             <button id="open-menu"><svg class="icon"><use xlink:href="#ico-menu"/></svg></button>
@@ -78,157 +81,328 @@
 
         </div>
 
-        <div class="main-banner"></div>
+        <script>
+            function createCard (parent){
+                // функция для размножения карточек 
+                // нужна на стадии макета
 
+                const card = `
+                    <button class="card">
+                        <div class="card-img">
+                            <img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt="">
+                            <div class="props">
+                                <div class="prop-thickness">
+                                    <div><img src="img/thickness.png" alt=""></div>
+                                    <div>3,55 мм</div>
+                                </div>
+                                <div class="prop-overlay">
+                                    <div><img src="img/overlay.png" alt=""></div>
+                                    <div>0,6 мм</div>
+                                </div>
+                                <div class="prop-class">
+                                    <div>43</div>
+                                    <div>класс</div>
+                                </div>
+                                <div class="prop-thickness">
+                                    <div>4v</div>
+                                    <div>фаска</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-title">Decoria Mild Tile Дуб Жанто Дуб Жанто Дуб Жанто Дуб Жанто</div>
+                        <div class="card-category">Кварцвинил клеевой</div>
+                        <div class="card-price">1140</div>
+                    </button>
+                `
+                parent.insertAdjacentHTML('afterbegin', card);
+            }
+        </script>
 
-        <div class="main-block main-bestsellers">
-            <div class="main-bestsellers__title">Хиты продаж</div>
-            <div class="board-cards-h">000</div>
+        <div class="block-in-main main-bestsellers">
+            <div class="title">Хиты продаж</div>
+
+            <div class="board-cards-btns">
+                <button class="board-cards-h-header-back">
+                    <svg class="icon"><use xlink:href="#ico-arrow"/></svg>
+                </button>
+                <button class="board-cards-h-header-next">
+                    <svg class="icon"><use xlink:href="#ico-arrow"/></svg>
+                </button>
+            </div>
+
+            <div class="board-cards-cards">
+                <script>
+                    const bestsellers = document.querySelector(".main-bestsellers > .board-cards-cards")
+                    createCard(bestsellers)
+                    createCard(bestsellers)
+                    createCard(bestsellers)
+                    createCard(bestsellers)
+                    createCard(bestsellers)
+                    createCard(bestsellers)
+                </script>
+            </div>
+
+        </div>
+
+        <div class="block-in-main main-popular-categories">
+            <div class="title">Популярные категории</div>
+            <div class="categories">
+                <a href=""><img src="img/001.png" alt=""><div>Ламинат 12 мм</div></a>
+                <a href=""><img src="img/002.png" alt=""><div>Плинтус из дюрополимера</div></a>
+                <a href=""><img src="img/003.png" alt=""><div>Кварцвинил замковый Ёлочка</div></a>
+                <a href=""><img src="img/004.png" alt=""><div>Нецарапающийся кварцвинил</div></a>
+                <a href=""><img src="img/005.png" alt=""><div>Кварцвинил клеевой для коммерции</div></a>
+                <a href=""><img src="img/006.png" alt=""><div>Замковый кварцвинил с подложкой</div></a>
+            </div>
+        </div>
+
+        <div class="block-in-main main-novelties">
+            <div class="title">Новинки</div>
+            <div class="board-cards-btns">
+                <button class="board-cards-h-header-back">
+                    <svg class="icon"><use xlink:href="#ico-arrow"/></svg>
+                </button>
+                <button class="board-cards-h-header-next">
+                    <svg class="icon"><use xlink:href="#ico-arrow"/></svg>
+                </button>
+            </div>
+            <div class="board-cards-cards">
+                <script>
+                    const novelties = document.querySelector(".main-novelties > .board-cards-cards")
+                    createCard(novelties)
+                    createCard(novelties)
+                </script>
+            </div>
         </div>
 
 
-        <div class="main-block main-popular-categories">
-            <div class="main-popular-categories__title">Популярные категории</div>
-            <div class="board-categories">000</div>
+        <div class="block-in-main main-reviews">
+            <div class="title">Отзывы</div>
+            <div class="board-reviews">
+
+                <div class="review">
+                    <div class="avatar"><img src="img/av01.jpeg" alt=""></div>
+                    <div class="name">Елена Шаврукова</div>
+                    <div class="raiting"></div>
+                    <div class="published">15.04.23</div>
+                    <div class="description">Заказывали в Поларт ламинат. Продавец принял активное участия в выборе ассортимента и в подборе цвета. Товар доставлен быстро. Претензий к качеству нет.</div>
+                </div>
+
+                <div class="review">
+                    <div class="avatar"><img src="img/av02.jpg" alt=""></div>
+                    <div class="name">Кристина</div>
+                    <div class="raiting"></div>
+                    <div class="published">10.04.23</div>
+                    <div class="description">Долго определялись с выбором напольного покрытия, запомнилась не навязчивость и грамотность консультанта Валентина. Посмотрев кучу обзоров и отзывов о рекомендуемых Валентином SPC,выбор пал на Respect. Вариант оказался качественным и выгодным. Отдельная благодарность Илье за всестороннюю помощь,быструю доставку. Видом Пола наслаждаюсь каждый день.</div>
+                </div>
+
+                <div class="review">
+                    <div class="avatar"><img src="img/av03.jpg" alt=""></div>
+                    <div class="name">Rita Ibragimova</div>
+                    <div class="raiting"></div>
+                    <div class="published">04.04.23</div>
+                    <div class="description">Ребята консультанты молодцы, клиентоориентированы, ответили на все вопросы и даже больше, помогли с выбором. Ассортимент большой, обязательно найдете что ищите.</div>
+                </div>
+
+                <div class="review">
+                    <div class="avatar"><img src="img/av04.jpeg" alt=""></div>
+                    <div class="name">Андрей Л</div>
+                    <div class="raiting"></div>
+                    <div class="published">27.03.23</div>
+                    <div class="description">Большой ассортимент кварц виниловой плитки. Грамотные консультанты. Отличное обслуживание. Можно взять образцы домой, очень удобно, можно прикинуть как пол будет смотреться в квартире и сочетаться со стенами, мебелью, дверьми.</div>
+                </div>
+
+                <div class="review">
+                    <div class="avatar"><img src="img/av01.jpeg" alt=""></div>
+                    <div class="name">shahvorostova81</div>
+                    <div class="raiting"></div>
+                    <div class="published">27.03.23</div>
+                    <div class="description">Долго не могла определиться с выбором плитки ПВХ, но в ПолАрт сделала свой выбор в течении 10 минут , благодаря грамотным сотрудникам , которые объяснили просто о сложном. А также бесплатная доставка в удобное для меня время , это очень приятный бонус. Отдельное спасибо Илье Ч. – настоящий профессионал своего дела!</div>
+                </div>
+
+                <div class="review">
+                    <div class="avatar"><img src="img/av01.jpeg" alt=""></div>
+                    <div class="name">Наталья Зимонина</div>
+                    <div class="raiting"></div>
+                    <div class="published">04.03.23</div>
+                    <div class="description">Купили с мужем кварцевый ламинат. Долго искали в разных магазинах и нашли в компании ПолАрт в Калейдоскопе. Огромный выбор и грамотная консультация. Покупку сделали ещё в декабре и до начала работ ламинат ждал нас на складе компании. Бесплатную доставку оформили в марте.Огромное спасибо компании ПолАрт.</div>
+                </div>
+
+                <div class="review">
+                    <div class="avatar"><img src="img/av01.jpeg" alt=""></div>
+                    <div class="name">Дарья Ф</div>
+                    <div class="raiting"></div>
+                    <div class="published">28.02.23</div>
+                    <div class="description">Продавец Валентин очень подробно рассказал о товаре, посоветовал какое покрытие напольное взять , но очень настаивал на замковой плитке пвх, хотя мы пришли за клеевой, за это -1 звезда. Так как мы ушли, ничего не купив, в раздумьях. Но он помог определиться с цветом Пола, что нужно отталкиваться от стен в целом его подход очень классный, уверенный!<br>Ассортимент достаточно большой , есть из чего выбрать:)</div>
+                </div>
+
+                <div class="review">
+                    <div class="avatar"><img src="img/av01.jpeg" alt=""></div>
+                    <div class="name">Александр Котов</div>
+                    <div class="raiting"></div>
+                    <div class="published">08.02.23</div>
+                    <div class="description">Замечательные ребята. Всё показали, рассказали, ненавязчиво помогали с выбором. Большой ассортимент на любой вкус.</div>
+                </div>
+            </div>
         </div>
 
 
-        <div class="main-block main-novelties">
-            <div class="main-novelties__title">Новинки</div>
-            <div class="board-cards-h">000</div>
-        </div>
+        <div class="block-in-main main-answers-on-questions">
 
-
-        <div class="main-block main-reviews">
-            <div class="main-reviews__title">Отзывы</div>
-            <div class="board-reviews">000</div>
-        </div>
-
-
-        <div class="main-block main-answers-on-questions">
-
-            <div class="main-answers-on-questions__title">Ответы на вопросы</div>
-            <div class="main-answers-on-questions__navigation">
+            <div class="title">Ответы на вопросы</div>
+            <div class="navigation">
                 Вот наиболее часто задаваемые вопросы про
-                <div class="main-answers-on-questions__navigation__combobox combobox">
-                    <span>Ламинат</span>
-                    <span>Кварцвинил клеевой</span>
-                    <span>Кварцвинил замковый</span>
-                    <span>Ламинат</span>
-                    <span>Ламинат</span>
+                <div class="combobox">
+                    <button class="combobox-selected">
+                        <span>ламинат</span>
+                        <svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg>
+                    </button>
+                    <div class="combobox-selection">
+                        <button type-question="laminate">ламинат</button>
+                        <button type-question="lock-quartz-vinyl">кварцвинил клеевой</button>
+                        <button type-question="adhesive-quartz-vinyl">кварцвинил замковый</button>
+                        <button type-question="delivery">доставку</button>
+                        <button type-question="payment">оплату</button>
+                    </div>
                 </div>
             </div>
 
             <div class="board-answers">
 
-                <div class="board-answers__answer" type-question="laminate">
+                <div class="answer" type-question="laminate">
                     <div class="question">Можно ли использовать ламинат с системой теплых полов?</div>
-                    <div class="answer">Да, ламинат подходит для использования с системой теплых полов. Необходимо соблюдать ограничения в 28 градусов.</div>
+                    <div class="answer">Да, ламинат подходит для использования с системой теплых полов. Необходимо соблюдать ограничения в 28 градусов.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="laminate">
+                <div class="answer" type-question="laminate">
                     <div class="question">Какое должно быть основание для укладки ламината?</div>
-                    <div class="answer">Основание под ламинат должно быть сухое, ровное и прочное. Допустимые отклонения чернового пола от плоскостности - 2 мм на 2 м.</div>
+                    <div class="answer">Основание под ламинат должно быть сухое, ровное и прочное. Допустимые отклонения чернового пола от плоскостности - 2 мм на 2 м.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="laminate">
+                <div class="answer" type-question="laminate">
                     <div class="question">Не вредно ли ламинированное покрытие для окружающих?</div>
-                    <div class="answer">Ламинат безопасен для здоровья и может быть использована даже в детской комнате. Но стоит отдать преимущество проверенным, известным брендам. Вы всегда сможете запросить сертификат на их продукцию.</div>
+                    <div class="answer">Ламинат безопасен для здоровья и может быть использована даже в детской комнате. Но стоит отдать преимущество проверенным, известным брендам. Вы всегда сможете запросить сертификат на их продукцию.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="laminate">
+                <div class="answer" type-question="laminate">
                     <div class="question">Можно ли использовать ламинат в ванной комнате?</div>
-                    <div class="answer">Мы не советуем использовать ламинат в ванной комнате, так как этот материал боится воды. Даже ламинат с хорошими влагостойкими свойствами будет бессилен против активного купания в ванной.</div>
+                    <div class="answer">Мы не советуем использовать ламинат в ванной комнате, так как этот материал боится воды. Даже ламинат с хорошими влагостойкими свойствами будет бессилен против активного купания в ванной.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="laminate">
+                <div class="answer" type-question="laminate">
                     <div class="question">Какой класс ламината подойдет для жилых помещений?</div>
-                    <div class="answer">Для жилых помещений подойдет 32 класс износостойкости. Нет смысла искать 33 и даже 34 класс! Лучше взять ламинат 32 класса у проверенного бренда.</div>
+                    <div class="answer">Для жилых помещений подойдет 32 класс износостойкости. Нет смысла искать 33 и даже 34 класс! Лучше взять ламинат 32 класса у проверенного бренда.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="laminate">
+                <div class="answer" type-question="laminate">
                     <div class="question">Обязательно ли использовать подложку?</div>
-                    <div class="answer">Использовать подложку обязательно! Она обеспечивает необходимый уровень звукопоглощения и дополнительно выравнивает пол. Но при значительных перепадах и дефектах поверхности она не обеспечит ровную поверхность. Поэтому выравнивать пол перед монтажом все равно необходимо.</div>
+                    <div class="answer">Использовать подложку обязательно! Она обеспечивает необходимый уровень звукопоглощения и дополнительно выравнивает пол. Но при значительных перепадах и дефектах поверхности она не обеспечит ровную поверхность. Поэтому выравнивать пол перед монтажом все равно необходимо.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="laminate">
+                <div class="answer" type-question="laminate">
                     <div class="question">Можно ли ламинат клеить к основанию?</div>
-                    <div class="answer">Ламинат – это плавающее покрытие, которое укладывается на подложку! Но в некоторых случаях есть возможность приклеить ламинат к основанию (полу или стене). Обязательное условие – это приклеивать ламинат по всей площади, а не частично. Важно знать, что гарантии на материал у Вас не будет.</div>
+                    <div class="answer">Ламинат – это плавающее покрытие, которое укладывается на подложку! Но в некоторых случаях есть возможность приклеить ламинат к основанию (полу или стене). Обязательное условие – это приклеивать ламинат по всей площади, а не частично. Важно знать, что гарантии на материал у Вас не будет.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="lock-quartz-vinyl">
+                <div class="answer" type-question="lock-quartz-vinyl">
                     <div class="question">Можно ли использовать замковый кварц-винил с системой теплых полов?</div>
-                    <div class="answer">Да, замковый кварц-винил подходит для использования с системой теплых полов. Необходимо соблюдать ограничения в 27 градусов.</div>
+                    <div class="answer">Да, замковый кварц-винил подходит для использования с системой теплых полов. Необходимо соблюдать ограничения в 27 градусов.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="lock-quartz-vinyl">
+                <div class="answer" type-question="lock-quartz-vinyl">
                     <div class="question">Какое должно быть основание для укладки замкового кварц-винила?</div>
-                    <div class="answer">Основание под замковый кварц-винил должно быть сухое, ровное и прочное. Допустимые отклонения чернового пола от плоскостности - 2 мм на 2 м.</div>
+                    <div class="answer">Основание под замковый кварц-винил должно быть сухое, ровное и прочное. Допустимые отклонения чернового пола от плоскостности - 2 мм на 2 м.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="lock-quartz-vinyl">
+                <div class="answer" type-question="lock-quartz-vinyl">
                     <div class="question">Соответствует ли плитка стандартам экологичности и безопасности?</div>
-                    <div class="answer">Кварц-виниловая плитка не выделяет вредных для человеческого организма паров и веществ, а в составе отсутствуют формальдегиды и фенолы. Наоборот, ее состав по большей части состоит из натуральных составляющих.</div>
+                    <div class="answer">Кварц-виниловая плитка не выделяет вредных для человеческого организма паров и веществ, а в составе отсутствуют формальдегиды и фенолы. Наоборот, ее состав по большей части состоит из натуральных составляющих.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
+
                 </div>
 
-                <div class="board-answers__answer" type-question="lock-quartz-vinyl">
+                <div class="answer" type-question="lock-quartz-vinyl">
                     <div class="question">Требуется ли укладка подложки под покрытие?</div>
-                    <div class="answer">Под Кварц-виниловая плитка требуется подложка толщиной 1,5 мм, если в инструкции по укладке данного покрытия пишут о такой необходимости. Подложка укладывается в основном под SPC. Если подложка уже встроена (приклеена к плитке), то дополнительно укладывать подложку запрещено. Под LVT, как правило использование подложки не требуется (но смотрим инструкцию конкретного производителя).</div>
+                    <div class="answer">
+                        Под Кварц-виниловая плитка требуется подложка толщиной 1,5 мм, если в инструкции по укладке данного покрытия пишут о такой необходимости. Подложка укладывается в основном под SPC. Если подложка уже встроена (приклеена к плитке), то дополнительно укладывать подложку запрещено. Под LVT, как правило использование подложки не требуется (но смотрим инструкцию конкретного производителя).
+                        <svg class="icon"><use xlink:href="#ico-success"/></svg>
+                    </div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="lock-quartz-vinyl">
+                <div class="answer" type-question="lock-quartz-vinyl">
                     <div class="question">Имеет ли плитка запах?</div>
-                    <div class="answer">По завершению монтажа возможен запах, однако он убирается простым проветриванием помещения и влажной уборки с использованием чистящего средства.</div>
+                    <div class="answer">По завершению монтажа возможен запах, однако он убирается простым проветриванием помещения и влажной уборки с использованием чистящего средства.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="adhesive-quartz-vinyl">
+                <div class="answer" type-question="adhesive-quartz-vinyl">
                     <div class="question">Нужно ли грунтовать основание перед наклейкой ПВХ плитки?</div>
-                    <div class="answer">Обязательно. Цель любой грунтовки – усилить адгезию материала с клеем, чтобы отдельные плашки были зафиксированы более надежно, усилить гидроизоляционные свойства основания и максимально предотвратить попадание пыли на стяжку или подложку.</div>
+                    <div class="answer">Обязательно. Цель любой грунтовки – усилить адгезию материала с клеем, чтобы отдельные плашки были зафиксированы более надежно, усилить гидроизоляционные свойства основания и максимально предотвратить попадание пыли на стяжку или подложку.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="adhesive-quartz-vinyl">
+                <div class="answer" type-question="adhesive-quartz-vinyl">
                     <div class="question">Кварц-виниловая плитка – это, по сути, тот же линолеум. Так ли это?</div>
-                    <div class="answer">Нет, это ошибочное утверждение. По своим характеристикам данные покрытия принципиально отличаются друг от друга. Прежде всего разница в материале базового слоя. Если в случае с линолеумом последний представляет собой вспененный ПВХ, то у кварц-винила плита состоит примерно на 25% из измельченного до мукообразного состояния кварцевого песка и примерно 75% поливинилхлорида (ПВХ). Такая плита имеет повышенную армированность, высокую плотность (1900 кг/м³), стабильность геометрических параметров (0-0,5%), отличную теплоизоляцию, низкую теплопроводность (0,25 Вт/мК), шумоизоляцию (19 дБ), огнеупорность (класс КМ2, Г2), электросопротивляемость (≤10 Ом).</div>
+                    <div class="answer">Нет, это ошибочное утверждение. По своим характеристикам данные покрытия принципиально отличаются друг от друга. Прежде всего разница в материале базового слоя. Если в случае с линолеумом последний представляет собой вспененный ПВХ, то у кварц-винила плита состоит примерно на 25% из измельченного до мукообразного состояния кварцевого песка и примерно 75% поливинилхлорида (ПВХ). Такая плита имеет повышенную армированность, высокую плотность (1900 кг/м³), стабильность геометрических параметров (0-0,5%), отличную теплоизоляцию, низкую теплопроводность (0,25 Вт/мК), шумоизоляцию (19 дБ), огнеупорность (класс КМ2, Г2), электросопротивляемость (≤10 Ом).<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="adhesive-quartz-vinyl">
+                <div class="answer" type-question="adhesive-quartz-vinyl">
                     <div class="question">Можно ли использовать клеевой кварц-винил с системой теплых полов?</div>
-                    <div class="answer">Да, клеевой кварц-винил подходит для использования с системой теплых полов. Необходимо соблюдать ограничения в 27 градусов.</div>
+                    <div class="answer">Да, клеевой кварц-винил подходит для использования с системой теплых полов. Необходимо соблюдать ограничения в 27 градусов.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="adhesive-quartz-vinyl">
+                <div class="answer" type-question="adhesive-quartz-vinyl">
                     <div class="question">Соответствует ли плитка стандартам экологичности и безопасности?</div>
-                    <div class="answer">Кварц-виниловая плитка не выделяет вредных для человеческого организма паров и веществ, а в составе отсутствуют формальдегиды и фенолы. Наоборот, ее состав по большей части состоит из натуральных составляющих.</div>
+                    <div class="answer">Кварц-виниловая плитка не выделяет вредных для человеческого организма паров и веществ, а в составе отсутствуют формальдегиды и фенолы. Наоборот, ее состав по большей части состоит из натуральных составляющих.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="adhesive-quartz-vinyl">
+                <div class="answer" type-question="adhesive-quartz-vinyl">
                     <div class="question">Какой расход клея на квадратный метр?</div>
-                    <div class="answer">Расход клея при монтаже клеевой кварц-виниловой плитки 300 – 350 грамм на квадратный метр. Главное использовать специальный шпатель А2.</div>
+                    <div class="answer">Расход клея при монтаже клеевой кварц-виниловой плитки 300 – 350 грамм на квадратный метр. Главное использовать специальный шпатель А2.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="adhesive-quartz-vinyl">
+                <div class="answer" type-question="adhesive-quartz-vinyl">
                     <div class="question">Как скоро, после нанесения на основание, клей набирает свою клеящую способность?</div>
-                    <div class="answer">Каждый клей имеет определённое время набора клеящей способности. Обычно производители клея указывают этот параметр на упаковки клея. Также можно использовать давно проверенный способ проверки набрал ли клей клеящую способность – необходимо потрогать пальцем нанесённый клеевой гребень, если палец остался сухим и клей не запачкал его, то клей набрал клеящую способность. Время набора клеящей способности может значительно изменятся под воздействием таких факторов как температура и влажность в помещении.</div>
+                    <div class="answer">Каждый клей имеет определённое время набора клеящей способности. Обычно производители клея указывают этот параметр на упаковки клея. Также можно использовать давно проверенный способ проверки набрал ли клей клеящую способность – необходимо потрогать пальцем нанесённый клеевой гребень, если палец остался сухим и клей не запачкал его, то клей набрал клеящую способность. Время набора клеящей способности может значительно изменятся под воздействием таких факторов как температура и влажность в помещении.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="adhesive-quartz-vinyl">
+                <div class="answer" type-question="adhesive-quartz-vinyl">
                     <div class="question">Имеет ли плитка запах?</div>
-                    <div class="answer">По завершению монтажа возможен запах, однако он убирается простым проветриванием помещения и влажной уборки с использованием чистящего средства.</div>
+                    <div class="answer">По завершению монтажа возможен запах, однако он убирается простым проветриванием помещения и влажной уборки с использованием чистящего средства.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="laminate">
+                <div class="answer" type-question="delivery">
                     <div class="question">Есть ли у Вас подъем?</div>
-                    <div class="answer">Да, Вы можете воспользоваться услугами грузчика.<br><br>Подъем до 50 м2 материала стоит 600 рублей (при наличии лифта).<br><br>Подъем более 50 м2 материала стоит 1200 рублей (при наличии лифта).<br><br>Отсутствие лифта и прочие условия, удорожают подъем. Считается индивидуально по каждому случаю.</div>
+                    <div class="answer">Да, Вы можете воспользоваться услугами грузчика.<br><br>Подъем до 50 м2 материала стоит 600 рублей (при наличии лифта).<br><br>Подъем более 50 м2 материала стоит 1200 рублей (при наличии лифта).<br><br>Отсутствие лифта и прочие условия, удорожают подъем. Считается индивидуально по каждому случаю.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="delivery">
+                <div class="answer" type-question="delivery">
                     <div class="question">Сколько у Вас стоит доставка?</div>
-                    <div class="answer">Доставка по городу Новосибирску и ближайшие населенные пункты (Бердск, Кольцово, Краснообск, Каменка, Академгородок и ОбьГЭС) бесплатная. В другие регионы отправляем по тарифам транспортных компаний.</div>
+                    <div class="answer">Доставка по городу Новосибирску и ближайшие населенные пункты (Бердск, Кольцово, Краснообск, Каменка, Академгородок и ОбьГЭС) бесплатная. В другие регионы отправляем по тарифам транспортных компаний.<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
 
-                <div class="board-answers__answer" type-question="payment">
+                <div class="answer" type-question="payment">
                     <div class="question">Какие способы оплаты заказа у Вас имеются?</div>
-                    <div class="answer">Оплатить заказ можно лично, в любом салоне ПолАрт, либо дистанционно.<br>Способы оплаты:<br>- Безналичный<br>- Наличный<br>- Перевод на карту<br>- Перевод на расчетный счет<br>- По QR коду</div>
+                    <div class="answer">Оплатить заказ можно лично, в любом салоне ПолАрт, либо дистанционно.<br>Способы оплаты:<br>- Безналичный<br>- Наличный<br>- Перевод на карту<br>- Перевод на расчетный счет<br>- По QR коду<svg class="icon"><use xlink:href="#ico-success"/></svg></div>
+                    <button><svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg></button>
                 </div>
             </div>
         </div>
@@ -237,32 +411,32 @@
     <!-- FOOTER -->
 
     <footer>
-        <div class="footer-title">Магазины</div>
-        <div class="footer-title">Меню</div>
+        <div class="footer-title-stores">Магазины</div>
+        <div class="footer-title-menu">Меню</div>
         
-        <div class="footer-store">
-            <a class="footer-store__address" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593">г. Новосибирск<br>Площадь К. Маркса, 6/1<br>ТВК Калейдоскоп, 1 этаж</a>
+        <div class="footer-store-1">
+            <a class="footer-store__address" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">г. Новосибирск<br>Площадь К. Маркса, 6/1<br>ТВК Калейдоскоп, 1 этаж</a>
 
             <div>График работы:<br>ежедневно, 10:00-21:00</div>
 
-            <a href="tel:+73832642036">+7 (383) 264-20-36</a>
+            <a href="tel:+73832642036" target="_blank">+7 (383) 264-20-36</a>
 
-            <a href="https://api.whatsapp.com/send/?phone=%2B79913792329&text&type=phone_number&app_absent=0">WhatsApp</a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B79913792329&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
 
-            <a href="https://t.me/+79913792329">Telegram</a>
+            <a href="https://t.me/+79913792329" target="_blank">Telegram</a>
         </div>
 
 
-        <div class="footer-store">
-            <a class="footer-store__address" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593">г. Новосибирск<br>​Проспект Дзержинского, 1/4<br>ТЦ Практика Уюта, 2 этаж</a>
+        <div class="footer-store-2">
+            <a class="footer-store__address" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">г. Новосибирск<br>​Проспект Дзержинского, 1/4<br>ТЦ Практика Уюта, 2 этаж</a>
 
             <div>График работы:<br>ежедневно, 10:00-20:00</div>
 
-            <a href="tel:+73832631517">+7 (383) 263-15-17</a>
+            <a href="tel:+73832631517" target="_blank">+7 (383) 263-15-17</a>
 
-            <a href="https://api.whatsapp.com/send/?phone=%2B79039001517&text&type=phone_number&app_absent=0">WhatsApp</a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B79039001517&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
 
-            <a href="https://t.me/+79039001517">Telegram</a>
+            <a href="https://t.me/+79039001517" target="_blank">Telegram</a>
         </div>
 
         <div class="footer-menu">
@@ -272,7 +446,7 @@
             <a href="">Новости и акции</a>
         </div>
 
-        <div class="footer-logo">ПОЛАРТ.РФ</div>
+        <a class="footer-logo" href="home.html">ПОЛАРТ.РФ</a>
     </footer>
 </body>
 </html>

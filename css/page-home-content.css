@@ -1,0 +1,535 @@
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-in-main {
+    font-size: 1rem;
+    padding-top: 3em;
+    width: 100%;
+    max-width: 80em;
+}
+
+.block-in-main > .title {
+    font-size: 1.8em;
+    font-weight: 500;
+    padding-bottom: .5em;
+    text-align: center;
+    color: var(--black-color);
+}
+
+.block-in-main > .board-cards-btns {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1em;
+}
+
+.block-in-main > .board-cards-btns > button {
+    font-size: 1.1em;
+    background-color: transparent;
+    width: 3em;
+    height: 2em;
+    border-radius: 1.5em 1em;
+
+    transition: all 300ms ease;
+}
+
+.block-in-main > .board-cards-btns > button:last-child {
+    transform: rotate(180deg);
+    margin-left: .7em;
+}
+
+.block-in-main > .board-cards-btns > button:active {
+    background-color: var(--gray-border-color);
+    opacity: .7;
+}
+
+.block-in-main > .board-cards-btns > button > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.board-cards-cards{
+    padding: .5em 1em 1em 1em;
+    /* margin: 0 1em; */
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+.board-cards-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    font-size: 1em;
+    min-width: 16.5em;
+    max-width: 16.5em;
+    height: 22em;
+    box-shadow: 4px 4px 8px 0px var(--gray-color);
+    background-color: var(--white-color);
+    padding: 0.3em;
+    user-select: none;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-right: 1em;
+    transition: box-shadow 300ms ease;
+}
+
+.card:hover {
+    box-shadow: 8px 8px 8px 0px var(--gray-color);
+}
+
+.card > .card-img {
+    width: 16.5em;
+    height: 16.5em;
+    margin: -.3em -.3em 0 -.3em;
+    position: relative;
+}
+
+.card > .card-img > .props {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+
+}
+
+.card > .card-img > .props > div {
+    width: 2.25em;
+    height: 2.25em;
+    background-color: var(--white-color);
+    border-radius: .25em;
+    margin: .25em .125em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card > .card-img > .props > div > div:first-child {
+    font-size: .65em;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.card > .card-img > .props > div > div > img {
+    width: 1.6em;
+    height: 1.6em;
+}
+
+.card > .card-img > .props > div > div:last-child {
+    font-size: .45em;
+    font-weight: 500;
+    color: var(--black-color);
+    padding-top: 0.4em;
+}
+
+.card > .card-img > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card > .card-title {
+    color: var(--black-color);
+    font-weight: 500;
+    padding-top: 1em;
+    white-space: nowrap;
+    position: relative;
+    text-align: left;
+}
+
+.card > .card-title::before{
+    content: "";
+    background: linear-gradient(90deg, transparent 0%, var(--white-color) 100%);;
+    position: absolute;
+    top: 0;
+    right: -.3em;
+    bottom: -1em;
+    width: 1.8em;
+}
+
+.card > .card-category {
+    font-size: .7em;
+    color: var(--black-color);
+    padding: .8em 0;
+    text-align: left;
+}
+
+.card > .card-price {
+    color: var(--gray-color);
+    font-weight: 600;
+    text-align: left;
+}
+
+.card > .card-price::after {
+    content: "₽/м²";
+    margin-left: .4em;
+}
+
+
+
+
+.main-popular-categories > .categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 2em;
+}
+
+.main-popular-categories > .categories > a > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 300ms ease;
+}
+
+.main-popular-categories > .categories > a {
+    overflow: hidden;
+    position: relative;
+}
+
+.main-popular-categories > .categories > a:hover > img {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.main-popular-categories > .categories > a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(41,41,41,0.9) 0%, rgba(41,41,41,0.7) 100%);;
+    z-index: 2;
+    transition: opacity 300ms ease;
+}
+
+.main-popular-categories > .categories > a:hover::before {
+    opacity: .7;
+}
+
+.main-popular-categories > .categories > a:first-child,
+.main-popular-categories > .categories > a:last-child {
+    grid-column: span 2;
+}
+
+.main-popular-categories > .categories > a > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    padding: 1em;
+    text-align: center;
+    transition: all 300ms ease;
+
+    line-height: 1.6em;
+    font-weight: 500;
+    opacity: .9;
+}
+
+.main-popular-categories > .categories > a:hover > div {
+    top: 60%;
+    bottom: .5em;
+}
+
+.main-answers-on-questions > .title, 
+.main-answers-on-questions > .navigation, 
+.main-answers-on-questions > .board-answers {
+    grid-column: 2;
+}
+
+.main-answers-on-questions > .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2em 0 ;
+}
+
+.main-answers-on-questions{
+    background: linear-gradient(180deg, rgba(207,195,223,1) 0%, rgba(227,227,227,1) 100%);
+    grid-template-columns: minmax(0, 1fr) 5fr minmax(0, 1fr);
+
+    display: grid;
+
+}
+
+
+
+
+
+
+/* COMBO BOX */
+
+.combobox {
+    font-size: .8rem;
+    position: relative;
+
+    margin-left: 1em;
+}
+
+.combobox > button.combobox-selected {
+    font-size: 1em;
+    border-radius: .25em;
+    border: 1px solid var(--gray-border-color);
+    width: 16em;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding: .5em .25em .5em 1em;
+    text-align: left;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: default;
+}
+
+.combobox > button.combobox-selected > svg {
+    width: 2em;
+    height: 2em;
+}
+
+
+.combobox > .combobox-selection {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    background-color: var(--white-color);
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0 0 .25em .25em;
+
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+
+    transition: all 300ms ease;
+
+    overflow: hidden;
+
+    z-index: 2;
+    box-shadow: 0px 4px 8px 0px var(--gray-color);
+}
+
+.combobox > .combobox-selection > button {
+    font-size: 1em;
+    background-color: transparent;
+    color: var(--black-color);
+    padding: .5em 1em;
+    text-align: left;
+
+    transition: all 100ms ease;
+
+    cursor: default;
+}
+
+.combobox > .combobox-selection > button:hover {
+    background-color: var(--gray-color);
+    color: var(--white-color);
+}
+
+.board-answers > .answer {
+    background-color: var(--white-color);
+    border-radius: .5em;
+    padding: 1em 4em 1em 1em;
+    position: relative;
+    margin-bottom: 1em;
+    box-shadow: 4px 4px 8px 0px var(--gray-color);
+}
+
+.board-answers > .answer > button {
+    position: absolute;
+    
+    font-size: 1em;
+    top: 1em;
+    right: 1em;
+
+    width: 2em;
+    height: 2em;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white-color);
+    border: 1px solid var(--gray-border-color);
+}
+
+.board-answers > .answer > button:active {
+    background-color: var(--gray-border-color);
+}
+
+.board-answers > .answer > button > svg {
+    min-width: 1.8em;
+    max-width: 1.8em;
+    min-height: 1.8em;
+    max-height: 1.8em;
+}
+
+.board-answers > .answer > .answer {
+    background-color: var(--green-color);
+    color: var(--black-color);
+    font-size: .9em;
+    padding: 1em;
+    border-radius: .5em;
+
+    margin: 0 -3.5em 0 3.5em;
+
+    line-height: 1.2em;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.board-answers > .answer > .answer > svg {
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    bottom: 0.4em;
+    right: 0.4em;
+}
+
+.board-answers > .answer > .question {
+    font-weight: 500;
+    color: var(--black-color);
+    /* margin-bottom: 1em; */
+
+    height: 2em;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.main-reviews > .board-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16.5em, 1fr));
+    /* grid-template-rows: repeat(auto-fit, 25em); */
+    grid-auto-rows: auto;
+    grid-gap: 1em;
+    padding: 2em 1em ;
+}
+
+.main-reviews > .board-reviews > .review {
+    box-shadow: 4px 4px 8px 0px var(--gray-color);
+    background-color: var(--white-color);
+    border-radius: .25em;
+    overflow: hidden;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-reviews > .board-reviews > .review > .description {
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+    font-size: .84em;
+    line-height: 1.2em;
+    color: var(--black-color);
+    margin-top: 1em;
+
+}
+
+.main-reviews > .board-reviews > .review > .avatar {
+    width: 3em;
+    height: 3em;
+    border-radius: 1.5em;
+    overflow: hidden;
+}
+
+.main-reviews > .board-reviews > .review > .avatar > img {
+    object-fit: cover;
+    width: 3em;
+    height: 3em;
+}
+
+.main-reviews > .board-reviews > .review > .name {
+    font-weight: 500;
+}
+
+.main-reviews > .board-reviews > .review > .published{
+    color: var(--gray-color);
+}
+
+.main-reviews > .board-reviews > .review > .avatar,
+.main-reviews > .board-reviews > .review > .published,
+.main-reviews > .board-reviews > .review > .raiting,
+.main-reviews > .board-reviews > .review > .name {
+    margin-top: .6em;
+    color: var(--black-color);
+
+
+}
+
+
+@media (max-width: 980px) {
+    .board-cards-cards{
+        scrollbar-width: block;
+    }
+    
+    .board-cards-cards::-webkit-scrollbar {
+        display: block;
+    }
+
+    .block-in-main > .board-cards-btns {
+        display: none;
+    }
+
+    .main-popular-categories > .categories{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-popular-categories > .categories > a:last-child {
+        grid-row: 3;
+    }
+
+    .main-answers-on-questions > .navigation {
+        flex-direction: column;
+    }
+
+    .main-answers-on-questions{
+        grid-template-columns: .2em 1fr .2em;
+    }
+
+    .board-answers > .answer > .question {
+        font-size: .9em;
+    }
+
+    .main-answers-on-questions > .navigation > .combobox {
+        margin-top: 2em;
+    }
+
+    .board-answers > .answer > .answer {
+        margin: 0 -3.5em 0 0;
+    }
+}
