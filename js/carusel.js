@@ -17,14 +17,9 @@ function startTrackingTouch (event) {
 
 
 function trackingTouch (event) {
-    let blockWidth = Number( getComputedStyle(caruselBlocks[0]).width)
-
-    if (event.which === 1 | event.type === "touchmove") {
+    if (event.buttons & 1 | event.type === "touchmove") {
         lastTouch = event.type === "touchmove" ? event.touches[0].clientX : event.clientX;
         const diff = lastTouch - firstTouch
-
-        // console.log(event.touches)
-        
 
         caruselBlocks.forEach( (block, index) => {
             const shift = diff < 0 ? 
@@ -34,7 +29,6 @@ function trackingTouch (event) {
 
             block.style.transform = `translateX(${shift})`;
             // console.log(shift)
-            
         })
     }
 }
@@ -48,15 +42,17 @@ function finishTrackingTouch (event) {
     if (diff < 0){ // крутить вперед?
         if (posBlock.indexOf(0) + 1 != posBlock.length){
             // не является ли текущий элемент последним?
-            if (diff < blockWidth * -1 / 4) {
+            if (diff < blockWidth * -1 / 4 | diff > -20) {
                 // прошла ли мышка хотя бы треть пути?
+                // замечено ли микро-движение мышки влево?
                 posBlock = posBlock.map(item => item - 1);
             }
         }
     } else if (posBlock.indexOf(0) != 0) {
         // не является ли текущий элемент первым?
-        if (diff > blockWidth / 4) {
+        if (diff > blockWidth / 4 | diff < 20) {
             // прошла ли мышка хотя бы треть пути?
+            // замечено ли микро-движение мышки право?
             posBlock = posBlock.map(item => item + 1);
         }
     }

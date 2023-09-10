@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>ПОЛАРТ.РФ | Главная</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/variables.css">
     <link rel="stylesheet" type="text/css" href="css/frame.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/modal-windows.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/carusel.css">
     <link rel="stylesheet" type="text/css" href="css/page-home-content.css">
@@ -31,11 +32,11 @@
             <button id="open-menu"><svg class="icon"><use xlink:href="#ico-menu"/></svg></button>
             <button id="open-search"><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
             <a href="home.html" class="logo">ПОЛАРТ.РФ</a>
-            <div class="search"><button>Найти</button></div>
+            <div class="search"><button id="open-menu-on-pc">Найти</button></div>
             <a class="menu-point" href="">Монтажный отдел</a>
             <a class="menu-point" href="">Сотрудничество</a>
-            <button id="basket"><svg class="icon"><use xlink:href="#ico-basket"/></svg></button>
-            <button id="favorite"><svg class="icon"><use xlink:href="#ico-favorite"/></svg></button>
+            <button id="open-basket"><svg class="icon"><use xlink:href="#ico-basket"/></svg></button>
+            <button id="open-favorite"><svg class="icon"><use xlink:href="#ico-favorite"/></svg></button>
         </div>
 
 
@@ -448,5 +449,223 @@
 
         <a class="footer-logo" href="home.html">ПОЛАРТ.РФ</a>
     </footer>
+
+
+
+
+    <div class="modal-menu">
+
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Меню</div>
+
+        <div class="modal-menu-points">
+            <button class="point">
+                <svg class="icon"><use xlink:href="#ico-catalog"/></svg>
+                Каталог
+            </button>
+
+            <div class="modal-menu-sub-points">
+                <a href="" class="point">Ламинат</a>
+                <a href=""  class="point">Кварцвинил клеевой</a>
+                <a href=""  class="point">Кварцвинил замковый</a>
+                <a href=""  class="point">Сопутствующие товары</a>
+            </div>
+            
+            <a href=""  class="point">
+                <svg class="icon"><use xlink:href="#ico-tag"/></svg>
+                Новости и акции
+            </a>
+
+            <a href=""  class="point">
+                <svg class="icon"><use xlink:href="#ico-setting"/></svg>
+                Монтажный отдел
+            </a>
+
+            <a href=""  class="point">
+                <svg class="icon"><use xlink:href="#ico-cooperation"/></svg>
+                Сотрудничество
+            </a>
+
+        </div>
+
+        <div class="modal-menu-footer">
+            <a class="point" href="tel:+73832645036">Позвонить ( +7 (383) 264-50-36 )</a>
+            <a class="point" href="https://api.whatsapp.com/send/?phone=%2B79039001517&text&type=phone_number&app_absent=0">Написать WhatsApp</a>
+            <a class="point" href="https://t.me/+79913792329">Написать Telegram</a>
+            <a class="point" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">Адрес</a>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="modal-search">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Найти</div>
+
+        <div class="search-area">
+            <input type="text" placeholder="Найти">
+            <button><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
+        </div>
+        <div class="result-area">
+            <a href="">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </a>
+
+            <a href="">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </a>
+
+            <a href="">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal-favorite">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Избранное</div>
+        <div class="cards">
+            <script>
+                const modalFavorite = document.querySelector(".modal-favorite > .cards")
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+            </script>
+        </div>
+    </div>
+
+
+
+    <div class="modal-basket">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Корзина</div>
+
+        <div class="backet-cards">
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="full-price">12345</div>
+        </div>
+
+        <button id="open-checkout">Оформить заказ</button>
+
+    </div>
+
+
+    <div class="modal-checkout">
+        <div class="pop-up">
+
+            <div class="title">Оформление заказа</div>
+
+            <input class="your-name" type="text" placeholder="Имя">
+
+            <div class="phone">
+                <div>+7</div><input type="tel" placeholder="Телефон">
+            </div>
+            
+            <div class="description">
+                Заполните все поля формы и нажмите "Заказать". После оформления заказа мы свяжемся с Вами для уточнения деталей
+            </div>
+
+            <div class="send-order"><button id="send-order">Заказать</button></div>
+            
+        </div>
+    </div>
+
+
+    <div class="modal-card-viewer">
+        
+    </div>
 </body>
 </html>
