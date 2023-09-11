@@ -27,3 +27,16 @@ document.querySelectorAll(".block-in-main > .board-cards-btns > .board-cards-h-h
 document.querySelectorAll(".block-in-main > .board-cards-btns > .board-cards-h-header-next").forEach( elem => {
     elem.onclick = shiftCardsNext
 })
+
+
+
+
+function addInFavorite(event){
+    // на странице просмотра товара разворачивает список со всеми свойствами
+    event.currentTarget.classList.toggle("added-favorite")
+}
+
+const openAllProps = document.querySelector(".modal-card-viewer > .pop-up > .about > #set-favorite")
+if (openAllProps !== null){
+    openAllProps.onclick = addInFavorite
+}

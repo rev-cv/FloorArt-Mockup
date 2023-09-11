@@ -15,12 +15,14 @@
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/carusel.css">
     <link rel="stylesheet" type="text/css" href="css/page-home-content.css">
+    <link rel="stylesheet" type="text/css" href="css/image-slider.css">
 
     <script src="js/sprite-svg.js" defer></script>
     <script src="js/header.js" defer></script>
     <script src="js/carusel.js" defer></script>
     <script src="js/cards.js" defer></script>
     <script src="js/combo-box.js" defer></script>
+    <script src="js/image-slider.js" defer></script>
 </head>
 <body>
 
@@ -88,7 +90,7 @@
                 // нужна на стадии макета
 
                 const card = `
-                    <button class="card">
+                    <button class="card open-card-viewer">
                         <div class="card-img">
                             <img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt="">
                             <div class="props">
@@ -509,20 +511,20 @@
             <button><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
         </div>
         <div class="result-area">
-            <a href="">
+            <button class="open-card-viewer">
                 <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
                 <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
-            </a>
+            </button>
 
-            <a href="">
+            <button class="open-card-viewer">
                 <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
                 <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
-            </a>
+            </button>
 
-            <a href="">
+            <button class="open-card-viewer">
                 <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
                 <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
-            </a>
+            </button>
         </div>
     </div>
 
@@ -557,7 +559,7 @@
 
             <div class="backet-card" lot-price="3450.50" square="1.85">
                 <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
-                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
 
                 <div class="counter">
                     <button class="increment">-</button>
@@ -573,23 +575,7 @@
 
             <div class="backet-card" lot-price="3450.50" square="1.85">
                 <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
-                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
-
-                <div class="counter">
-                    <button class="increment">-</button>
-                    <input class="visible" type="number" maxlength="3" value="1"></input>
-                    <button class="decrement">+</button>
-                </div>
-
-                <div class="square">1.85м²</div>
-                <div class="price">3450.50 ₽</div>
-                
-                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
-            </div>
-
-            <div class="backet-card" lot-price="3450.50" square="1.85">
-                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
-                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
 
                 <div class="counter">
                     <button class="increment">-</button>
@@ -605,7 +591,7 @@
 
             <div class="backet-card" lot-price="3450.50" square="1.85">
                 <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
-                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
 
                 <div class="counter">
                     <button class="increment">-</button>
@@ -621,7 +607,23 @@
 
             <div class="backet-card" lot-price="3450.50" square="1.85">
                 <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
-                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
 
                 <div class="counter">
                     <button class="increment">-</button>
@@ -665,7 +667,83 @@
 
 
     <div class="modal-card-viewer">
-        
+
+        <div class="pop-up">
+
+            <button class="pop-up-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+
+            <div class="image-slider">
+                <div class="image-slider-list">
+                    <div><img src="img/egger-epl-051-1.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-2.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="about">
+
+            
+                <button id="set-favorite"><svg class="icon"><use xlink:href="#ico-favorite"/></svg></button>
+
+                <div class="title">Fargo Comfort Дуб Лондонский Туман Дуб Лондонский Туман</div>
+
+                <div class="category">Кварцвинил замковый</div>
+
+                <div class="props">
+                    <div class="prop-thickness">
+                        <div><img src="img/thickness.png" alt=""></div>
+                        <div>3,55 мм</div>
+                    </div>
+                    <div class="prop-overlay">
+                        <div><img src="img/overlay.png" alt=""></div>
+                        <div>0,6 мм</div>
+                    </div>
+                    <div class="prop-class">
+                        <div>43</div>
+                        <div>класс</div>
+                    </div>
+                    <div class="prop-thickness">
+                        <div>4v</div>
+                        <div>фаска</div>
+                    </div>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+
+                <button class="add-in-basket">В корзину</button>
+
+                <div class="description">
+                    Fargo Comfort - это коллекция декоров замкового SPC-ламината, качественно имитирующих благородные породы дуба. Микрофаска придаёт ламелям сходство с натуральным покрытием: древесной или инженерной доской. Уникальные дизайны с контрастными переходами, выраженными сучками и прожилками помогут вам создать уютный интерьер.
+                </div>
+
+                <div id="open-all-props">Технические характеристики</div>
+
+                <div class="list-with-all-props">
+                    <span>Толщина: 4 мм</span>
+                    <span>Защитный слой: 0,5 мм</span>
+                    <span>Класс: 43</span>
+                    <span>Фаска: микро</span>
+                    <span>Размер плашки: 950x184 мм</span>
+                    <span>Дизайн: дерево</span>
+                    <span>ECO класс: E1</span>
+                    <span>Тиснение: Синхронное тиснение</span>
+                    <span>Пожарная безопасность: KM2</span>
+                    <span>Вес упаковки: 18,5 кг.</span>
+                    <span>Квадратура упаковки: 2,2 м2</span>
+                    <span>Встроенная подложка: нет</span>
+                    <span>Рекомендованная подложка: 1,5 мм</span>
+                    <span>Бренд: Fargo</span>
+                    <span>Коллекция: Comfort</span>
+                    <span>Страна: Китай</span>
+                    <span>Артикул: 81996-14</span>
+                </div>
+
+            </div>
+        </div>
     </div>
 </body>
 </html>

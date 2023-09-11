@@ -54,7 +54,8 @@
 .modal-search,
 .modal-basket,
 .modal-checkout,
-.modal-favorite {
+.modal-favorite,
+.modal-card-viewer {
     position: fixed;
     top: 0;
     right: 0;
@@ -65,11 +66,6 @@
 
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* overflow: hidden; */
 
     background-color: var(--white-color);
     padding-top: 4em;
@@ -205,18 +201,21 @@
     padding: 1em;
 }
 
-.modal-search > .result-area > a {
+.modal-search > .result-area > button.open-card-viewer {
+    font-size: 1em;
+    background-color: transparent;
     display: flex;
+    align-items: center;
     margin-top: .5em;
     padding-bottom: .5em;
     border-bottom: 1px solid var(--gray-border-color);
 }
 
-.modal-search > .result-area > a:last-child {
+.modal-search > .result-area > button.open-card-viewer:last-child {
     border-bottom: none;
 }
 
-.modal-search > .result-area > a > .image {
+.modal-search > .result-area > button.open-card-viewer > .image {
     min-width: 4em;
     max-width: 4em;
     height: 4em;
@@ -224,13 +223,13 @@
     overflow: hidden;
 }
 
-.modal-search > .result-area > a > .image > img {
+.modal-search > .result-area > button.open-card-viewer > .image > img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.modal-search > .result-area > a > .title {
+.modal-search > .result-area > button.open-card-viewer > .title {
     font-size: .8em;
     color: var(--black-color);
     font-weight: 500;
@@ -328,6 +327,8 @@
 .backet-cards > .backet-card > .title {
     font-size: .8em;
     font-weight: 500;
+    background-color: transparent;
+    text-align: left;
 }
 
 .backet-cards > .backet-card > .counter {
@@ -436,6 +437,10 @@
 }
 
 @media (max-width: 980px) {
+    .backet-cards{
+        padding-right: 1em;
+    }
+    
     .backet-cards > .backet-card{
         grid-template-columns: 4em auto 5em 5em 2em;
     }
@@ -572,4 +577,267 @@
 
 .modal-checkout > .pop-up > .send-order > #send-order {
     margin: 0;
+}
+
+
+
+
+
+
+.modal-card-viewer {
+    /* display: flex;
+    opacity: 1;  */
+    
+    transform: translateY(0);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-color-50);
+    /* backdrop-filter: blur(6px); */
+    backdrop-filter: blur(0px);
+    z-index: 30;
+
+    transition: all 600ms ease;
+    padding: 0;
+}
+
+.modal-card-viewer > .pop-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: .6em 1em;
+    margin: 1em;
+    max-width: 50em;
+    max-height: 35em;
+    background-color: var(--white-color);
+    /* background-color: yellowgreen; */
+    padding: 1em 0;
+    /* overflow: hidden; */
+    border-radius: .25em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+    /* min-width: 300px;
+    max-width: 20em;
+    max-height: 20em;
+    margin: 1em;
+    transform: translateY(-40%);
+    padding: 0 1em 1em 1em;
+
+
+    opacity: 0;
+    transform: translateY(-55%);
+    transition: all 300ms ease; */
+}
+
+.modal-card-viewer > .pop-up > .image-slider{
+    padding-left: 1em;
+    .image-slider-list {
+        padding: 0.5em;
+    }
+}
+
+.modal-card-viewer > .pop-up > .about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .6em 1em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 1em;
+}
+
+.modal-card-viewer > .pop-up > .about > .props {
+    position: relative;
+    font-size: 1.2em;
+    justify-self: center;
+}
+
+.modal-card-viewer > .pop-up > .about > .props > div {
+    border: 1px solid var(--gray-border-color);
+}
+
+.modal-card-viewer > .pop-up > .about > .title {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--black-color);
+    text-align: center;
+}
+
+.modal-card-viewer > .pop-up > .about > #set-favorite {
+    font-size: 1em;
+    min-width: 3em;
+    max-width: 3em;
+    min-height: 3em;
+    max-height: 3em;
+    background-color: transparent;
+    justify-self: center;
+}
+
+
+.modal-card-viewer > .pop-up > .about > button > svg > use {
+    fill: transparent;
+    stroke: var(--black-color);
+}
+
+.modal-card-viewer > .pop-up > .about > #set-favorite > svg {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.modal-card-viewer > .pop-up > .about > .added-favorite > svg {
+    animation: heartbeat 1000ms infinite;
+}
+
+.modal-card-viewer > .pop-up > .about > .added-favorite > svg > use {
+    fill: red;
+    stroke: red;
+}
+
+@keyframes heartbeat {
+    0% {
+      transform: scale(1);
+      animation-timing-function: ease-in; 
+    }
+    30% {
+      transform: scale(0.96);
+      animation-timing-function: ease-out;  
+    }
+    40% {
+      transform: scale(0.94);
+    }
+    50% {
+      transform: scale(0.96); 
+      animation-timing-function: ease-in;
+    }
+    60% {
+      transform: scale(0.96);
+    }
+    100% { 
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+}
+
+.modal-card-viewer > .pop-up > .about > .category {
+    font-size: 0.8em;
+    color: var(--black-color);
+    text-align: center;
+}
+
+.modal-card-viewer > .pop-up > .about > .square,
+.modal-card-viewer > .pop-up > .about > .price {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--black-color);
+    text-align: center;
+    opacity: .9;
+}
+
+.modal-card-viewer > .pop-up > .about > .square {
+    opacity: .5;
+}
+
+.modal-card-viewer > .pop-up > .about > .add-in-basket {
+    font-size: 1em;
+    justify-self: center;
+    color: var(--white-color);
+    font-weight: 600;
+    padding: .5em 1.8em;
+    border-radius:  calc((1em + .8em * 2) / 2);
+    background: linear-gradient(60deg, rgba(233,178,68,1) 0%, rgba(227,73,65,1) 100%);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+    transition: box-shadow 300ms ease;
+}
+
+.modal-card-viewer > .pop-up > .about > .add-in-basket:hover{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.modal-card-viewer > .pop-up > .about > .description {
+    font-size: .8em;
+    line-height: 1.3em;
+    padding-top: 1em;
+    border-top: 1px solid var(--gray-border-color);
+}
+
+.modal-card-viewer > .pop-up > .about > .list-with-all-props {
+    font-size: .8em;
+    line-height: 1.3em;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-card-viewer > .pop-up > .about > .open-all-props {
+    color: var(--black-color);
+    font-size: 1em;
+    background-color: transparent;
+    padding: .5em 1.8em;
+    text-align: left;
+    border-radius: .25em;
+    transition: background-color 300ms ease;
+}
+
+.modal-card-viewer > .pop-up > .pop-up-close {
+    font-size: .8em;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    top: -.8em;
+    right: -.8em;
+    border-radius: 1em;
+    background-color: var(--white-color);
+    transition: background-color 300ms ease;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 32;
+}
+
+.modal-card-viewer > .pop-up > .pop-up-close:hover {
+    background-color: var(--gray-border-color);
+}
+
+.modal-card-viewer > .pop-up > .pop-up-close > svg {
+    width: 80%;
+    height: 80%;
+}
+
+
+@media (max-width: 800px) {
+    
+    .modal-card-viewer > .pop-up {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 0;
+        border-radius: 0;
+        flex-grow: 1;
+        max-width: inherit;
+        max-height: inherit;
+    }
+
+    .modal-card-viewer > .pop-up > .image-slider {
+        padding: 0 1em;
+        height: 25em;
+
+    }
+
+    .modal-card-viewer > .pop-up > .about {
+        overflow: hidden;
+        padding: 0 1em;
+        height: inherit;
+        height: 35em;
+    }
+
+    .modal-card-viewer > .pop-up > .pop-up-close {
+        top: 1em;
+        right: 1em;
+        font-size: 1em;
+        background-color: var(--white-color);
+        position: fixed;
+    }
+
+    
 }

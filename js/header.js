@@ -3,10 +3,11 @@ const search = document.querySelector(".modal-search")
 const favorite = document.querySelector(".modal-favorite")
 const basket = document.querySelector(".modal-basket")
 const checkout = document.querySelector(".modal-checkout")
+const cardviewer = document.querySelector(".modal-card-viewer")
 
 let modalLevel = 0;
 
-function openPopUp(element){
+function openPopUp(element, isShiftY){
     element.style.display = "flex";
     setTimeout(()=>{
         element.style.opacity = 1;
@@ -18,7 +19,9 @@ function openPopUp(element){
 
     setTimeout(()=>{
         popup.style.opacity = 1;
-        popup.style.transform = "translateY(-40%)";
+        if (isShiftY === true){
+            popup.style.transform = "translateY(-40%)";
+        }
     }, 300);
 
     const cwa = document.body.clientWidth;
@@ -32,10 +35,13 @@ function openPopUp(element){
     modalLevel += 1;
 }
 
-function closePopUp(element){
+function closePopUp(element, isShiftY){
     const popup = element.querySelector(".pop-up")
     popup.style.opacity = 0;
-    popup.style.transform = "translateY(-55%)";
+
+    if (isShiftY === true){
+        popup.style.transform = "translateY(-55%)";
+    }
 
     setTimeout(()=>{
         element.style.opacity = 0;
@@ -96,6 +102,14 @@ document.querySelector("#open-favorite").onclick = () => openModalWidows(favorit
 document.querySelector("#open-menu-on-pc").onclick = () => openModalWidows(search);
 document.querySelectorAll(".modal-close").forEach( elem => elem.onclick = closeModalWidows)
 
-document.querySelector("#open-checkout").onclick = () => openPopUp(checkout);
+document.querySelector("#open-checkout").onclick = () => openPopUp(checkout, true);
+document.querySelectorAll(".open-card-viewer").forEach( elem => {
+    elem.onclick = () => openPopUp(cardviewer)
+})
+
 checkout.onclick = () => closePopUp(checkout);
+cardviewer.onclick = () => closePopUp(cardviewer);
+document.querySelectorAll(".modal-card-viewer > .pop-up > .pop-up-close").forEach(elem => {
+    elem.onclick = () => closePopUp(cardviewer);
+})
 

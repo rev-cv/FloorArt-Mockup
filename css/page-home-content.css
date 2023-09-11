@@ -91,7 +91,7 @@ main {
     position: relative;
 }
 
-.card > .card-img > .props {
+.props {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -99,7 +99,7 @@ main {
 
 }
 
-.card > .card-img > .props > div {
+.props > div {
     width: 2.25em;
     height: 2.25em;
     background-color: var(--white-color);
@@ -112,18 +112,18 @@ main {
     align-items: center;
 }
 
-.card > .card-img > .props > div > div:first-child {
+.props > div > div:first-child {
     font-size: .65em;
     font-weight: 600;
     color: var(--black-color);
 }
 
-.card > .card-img > .props > div > div > img {
+.props > div > div > img {
     width: 1.6em;
     height: 1.6em;
 }
 
-.card > .card-img > .props > div > div:last-child {
+.props > div > div:last-child {
     font-size: .45em;
     font-weight: 500;
     color: var(--black-color);

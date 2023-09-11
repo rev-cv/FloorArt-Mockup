@@ -117,6 +117,13 @@ header > .menu-catalog > .header-phone:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
+}
+
+#open-favorite {
+    fill: transparent;
+    stroke: var(--black-color)
 }
 
 #open-basket {
