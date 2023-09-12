@@ -1,0 +1,80 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.installer-card {
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    align-content: center;
+    grid-gap: 1em;
+    max-width: 30em;
+
+    border-radius: .25em;
+    border: 1px solid var(--gray-border-color);
+    background-color: var(--white-color);
+    margin: 2em 0;
+    padding: 1em;
+}
+
+.installer-card > .image {
+    width: 10em;
+    height: 10em;
+    border-radius: .25em;
+    overflow: hidden;
+    grid-row: 1 / -1;
+}
+
+.installer-card > .image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.installer-card > .title,
+.installer-card > .boss,
+.installer-card > .phone,
+.installer-card > .email {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--black-color);
+    display: flex;
+}
+
+.installer-card > .boss {
+    font-size: .8em;
+}
+
+.installer-card > .phone,
+.installer-card > .email {
+    font-size: 1em;
+}
+
+.installer-card > .phone > svg,
+.installer-card > .email > svg {
+    width: 1.4em;
+    height: 1.4em;
+    align-items: center;
+    margin-right: 1em;
+    opacity: .8;
+}
+
+
+@media (max-width: 650px) {
+    .installer-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .installer-card > .image {
+        justify-self: center;
+        grid-row: inherit;
+    }
+}
+
+

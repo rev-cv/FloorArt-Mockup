@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ПОЛАРТ.РФ | Главная</title>
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/variables.css">
+    <link rel="stylesheet" type="text/css" href="css/cards.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/modal-windows.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/carusel.css">
+    <link rel="stylesheet" type="text/css" href="css/image-slider.css">
+    <link rel="stylesheet" type="text/css" href="css/page-cooperation-content.css">
+
+    <script src="js/sprite-svg.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/carusel.js" defer></script>
+    <script src="js/cards.js" defer></script>
+    <script src="js/image-slider.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <svg style="display:none">
+        <symbol id="ico-car" viewBox="0 0 64 64">
+            <g>
+                <path fill="var(--black-color)" d="M60,28c0-8.301-5.016-24-24-24h-8C9.016,4,4,19.699,4,28c-2.211,0-4,1.789-4,4v16c0,2.211,1.789,4,4,4h4v4	c0,2.211,1.789,4,4,4h4c2.211,0,4-1.789,4-4v-4h24v4c0,2.211,1.789,4,4,4h4c2.211,0,4-1.789,4-4v-4h4c2.211,0,4-1.789,4-4V32	C64,29.789,62.211,28,60,28z M16,44c-2.211,0-4-1.789-4-4s1.789-4,4-4s4,1.789,4,4S18.211,44,16,44z M12,28c0-0.652,0.184-16,16-16	h8c15.41,0,15.984,14.379,16,16H12z M48,44c-2.211,0-4-1.789-4-4s1.789-4,4-4s4,1.789,4,4S50.211,44,48,44z"/>
+            </g>
+        </symbol>
+
+        <symbol id="ico-manager" viewBox="0 0 52 52">
+            <g>
+                <path d="M28.7,42.1c7.2.2,7.4,1.6,7.4,7.2V50c-2.8,0-2.8-2.3-4-2.3,0,.8-.7,1.5-2,2.3-.8-1.5-1.4-2.3-2-2.3,0,.7-.6,1.4-1.8,2.2L26,50c-1.3-.8-2-1.5-2-2.3-.6,0-1.3.8-2,2.3-1.3-.8-2-1.5-2-2.3-1.3,0-1.3,2.3-4,2.3v-.9c0-5.3.4-6.7,6.9-7v.4a3,3,0,0,0,6,0A.41.41,0,0,1,28.7,42.1ZM30.2,6.8c3,3.6,2.4,5.3,2.5,6.4a11.91,11.91,0,0,1,7.8.8c1.8.9,2.9,2.3,3,3.3a4.69,4.69,0,0,0-3,1.5,14.94,14.94,0,0,1,6.1,3.9,17.05,17.05,0,0,1,3.3,5.6.77.77,0,0,1,0,.8,22.86,22.86,0,0,1-3.1,2.8,41.42,41.42,0,0,1-4.1,2.7c1.6,1,2.4,1.9,2.5,2.9-1.7.5-2.7.9-3.8,1.3-.5.2-1.5.5-2.6.9,1.6-10.5-5-11.5-8-11.5-2.1,0-3.3,1.7-5.1,1.7s-2.9-1.7-5.1-1.7S12.2,30,13.3,39a12.66,12.66,0,0,1-1.8-.7,21.17,21.17,0,0,0-5-.9A.53.53,0,0,1,5.9,37a.38.38,0,0,1,0-.15v-.3a10,10,0,0,1,2.4-4.3c.7-.7,2-1.6,2.5-1.5a8.68,8.68,0,0,0-3.4-3.1,19.5,19.5,0,0,0-4.8-1.3c-.5-.1-.8-.1-.5-1,1.7-4.3,3.7-7,6.1-8.2a11.26,11.26,0,0,1,6-1.5,9,9,0,0,0-1-2.5A12.94,12.94,0,0,0,12,11.2a.76.76,0,0,1,.1-1c.1,0,.2-.1.3-.1a6.64,6.64,0,0,1,3.1.2A8.08,8.08,0,0,1,19.4,13,36.29,36.29,0,0,0,18,2.8C17.9.6,27.2,3.2,30.2,6.8ZM22.7,34.1c.8,0,1.5,1.1,1.5,2.5s-.7,2.5-1.5,2.5-1.5-1.1-1.5-2.5S21.9,34.1,22.7,34.1Zm6.6,0c.8,0,1.5,1.1,1.5,2.5s-.7,2.5-1.5,2.5-1.5-1.1-1.5-2.5S28.4,34.1,29.3,34.1Z" fill="var(--black-color)"/>
+            </g>
+        </symbol>
+
+        <symbol id="ico-bonus" viewBox="0 0 52 52">
+            <g>
+                <path d="M33.39,28.66a3.12,3.12,0,1,0,3.15,3.13h0a3.13,3.13,0,0,0-3.11-3.13Z" fill="var(--black-color)"/><path d="M18.52,17.08a3.12,3.12,0,1,0,3.12,3.13,3.12,3.12,0,0,0-3.12-3.13Z" fill="var(--black-color)"/><path d="M48.77,22.84l-2.61-3.13a5.61,5.61,0,0,1-1.31-3.24l-.3-4a5.13,5.13,0,0,0-4.69-4.78l-3.49-.28a7.36,7.36,0,0,1-4.2-1.79L29.52,3.29a5.15,5.15,0,0,0-6.7-.06L19.94,5.66A6.64,6.64,0,0,1,16.15,7.2l-3.74.26a5.14,5.14,0,0,0-4.78,4.7l-.27,3.41a7.49,7.49,0,0,1-1.8,4.24L3.27,22.45a5.14,5.14,0,0,0-.06,6.69l2.49,3A6.21,6.21,0,0,1,7.12,35.7l.28,3.85a5.14,5.14,0,0,0,4.69,4.78l3.5.31a7.23,7.23,0,0,1,4.18,1.78l2.66,2.3a5.17,5.17,0,0,0,6.7.05l3.05-2.55a5.9,5.9,0,0,1,3.4-1.36l4-.29a5.13,5.13,0,0,0,4.78-4.69l.29-3.24a8.14,8.14,0,0,1,2-4.64l2.13-2.43A5.12,5.12,0,0,0,48.77,22.84Zm-36-2.63A5.8,5.8,0,1,1,18.55,26h0A5.79,5.79,0,0,1,12.73,20.21Zm8.39,17.11a.46.46,0,0,1-.35.23H19.08a.44.44,0,0,1-.37-.22.42.42,0,0,1,0-.43L30.83,14.65a.51.51,0,0,1,.36-.22H33a.44.44,0,0,1,.21.59h0Zm18.13-5.54A5.81,5.81,0,1,1,33.44,26h0a5.79,5.79,0,0,1,5.77,5.82h0Z" fill="var(--black-color)"/>
+            </g>
+        </symbol>
+
+        <symbol id="ico-message" viewBox="0 0 52 52">
+            <g>
+                <path d="M26,4C12.7,4,2,13.8,2,26c0,3.9,1.1,7.5,3,10.8c0.2,0.4,0.3,0.9,0.2,1.3L3,45c-0.4,1.3,0.8,2.4,2.1,2l7-2.4 c0.5-0.2,1-0.1,1.4,0.2c3.7,2.1,8,3.3,12.6,3.3c13.3,0,24-9.8,24-22C49.8,13.8,39.1,4,26,4z" fill="var(--black-color)"/>
+            </g>
+        </symbol>
+
+        <symbol  id="ico-learn" viewBox="0 0 20 20">
+            <g>
+                <rect x="0" fill="none" width="20" height="20" fill="var(--black-color)"/>
+                <path d="M10 10L2.54 7.02 3 18H1l.48-11.41L0 6l10-4 10 4zm0-5c-.55 0-1 .22-1 .5s.45.5 1 .5 1-.22 1-.5-.45-.5-1-.5zm0 6l5.57-2.23c.71.94 1.2 2.07 1.36 3.3-.3-.04-.61-.07-.93-.07-2.55 0-4.78 1.37-6 3.41C8.78 13.37 6.55 12 4 12c-.32 0-.63.03-.93.07.16-1.23.65-2.36 1.36-3.3z" fill="var(--black-color)"/>
+            </g>
+        </symbol>
+
+        <symbol id="ico-collections" viewBox="0 0 52 52">
+            <g>
+                <path d="m48.34 10-6.27-2v29.12l7.81-24.12a2.41 2.41 0 0 0 -1.53-3z" fill="var(--black-color)"/>
+                <path d="m20.52 5.59-3.71 1.21-13.15 4.28a2.42 2.42 0 0 0 -1.55 3l10.18 31.35a2.41 2.41 0 0 0 3 1.57l14-4.56 2.85-.94a2.39 2.39 0 0 0 1.56-3l-10.11-31.36a2.4 2.4 0 0 0 -3-1.57z" fill="var(--black-color)"/>
+                <path d="m37.34 34.06v-26.76a2.41 2.41 0 0 0 -2.41-2.41h-7.13a6.07 6.07 0 0 1 .32.8l9.05 27.75a5.24 5.24 0 0 1 .17.62z" fill="var(--black-color)"/>
+            </g>
+        </symbol>
+
+        <symbol id="ico-call-me" viewBox="0 0 52 52">
+            <g>
+                <path d="M31.9981689,11.9995104 C33.4659424,11.9985117 34.998291,13.1328 34.998291,16.1348 L34.998291,16.1348 L34.998291,26 C34.998291,27.5134277 36.3779053,28.1114014 36.9779053,28.3114014 L36.9779053,28.3114014 L43.8,30.8 C46.7,31.9 48.5,35 47.7,38.2 L47.7,38.2 L44.5,48.5995 C44.3,49.3995 43.6,49.9995 42.7,49.9995 L42.7,49.9995 L26.6,49.9995 C25.8,49.9995 25.1,49.5995 24.8,48.8995 C20.9318685,39.9190553 18.7869873,34.9395752 18.3653564,33.9610596 C17.9437256,32.9825439 18.2219401,32.1955241 19.2,31.6 C21,30.3 23.7,31.6395508 24.8,33.5395508 L24.8,33.5395508 L26.4157715,35.7431828 C27.0515137,36.9508 29,36.9508 29,35.1508 L29,35.1508 L29,16.1348 C29,13.1328 30.5303955,12.0005117 31.9981689,11.9995104 Z M46,2 C48.2,2 50,3.8 50,6 L50,6 L50,21 C50,22.882323 48.1813389,25.0030348 46,25 L46,25 L40.010437,25 C39,25 39,24.1881157 39,24.059082 L39,15.5 C39,11.6547018 37.0187988,8 32,8 C26.9812012,8 25,11.1879783 25,15.5 L25,15.5 L25,24.059082 C25,24.4078007 24.7352295,25 23.987793,25 L23.987793,25 L6,25 C3.8,25 2,23.2 2,21 L2,21 L2,6 C2,3.8 3.8,2 6,2 L6,2 Z" fill="var(--black-color)"/>
+            </g>
+        </symbol>
+
+        <symbol id="ico-cooperation-2" viewBox="0 0 52 52"><g>
+            <path d="M24.1,36.7L14.7,50l-2.4-6.4H5.9l8.2-11.1c1.6,1,3.3,1.1,4.5,1.4c0.4,0.1,0.9,0.2,1.1,0.2 c0.2,0.1,0.6,0.4,0.8,0.6C21.4,35.3,22.6,36.2,24.1,36.7z M39.3,32.5c-1.6,1-3.3,1.1-4.5,1.4c-0.4,0.1-1,0.2-1.2,0.2 c-0.2,0.1-0.6,0.4-0.8,0.6c-0.9,0.6-2,1.6-3.5,2.1L38.7,50l2.4-6.4h6.4C47.5,43.6,39.3,32.5,39.3,32.5z M26.7,11.6	c-3.1,0-5.6,2.5-5.6,5.6s2.5,5.6,5.6,5.6s5.6-2.5,5.6-5.6S29.8,11.6,26.7,11.6z M41.9,17.2c0,1.9-2.1,3.4-2.8,5.1 c-0.7,1.8-0.3,4.3-1.7,5.6c-1.3,1.3-3.8,1-5.6,1.7c-1.7,0.7-3.2,2.8-5.1,2.8s-3.4-2.1-5.1-2.8c-1.8-0.7-4.3-0.3-5.6-1.7 c-1.3-1.3-1-3.8-1.7-5.6c-0.7-1.7-2.8-3.2-2.8-5.1s2.1-3.4,2.8-5.1c0.7-1.8,0.3-4.3,1.7-5.6c1.3-1.3,3.8-1,5.6-1.7 C23.3,4.1,24.8,2,26.7,2s3.4,2.1,5.1,2.8c1.8,0.7,4.3,0.3,5.6,1.7c1.3,1.3,1,3.8,1.7,5.6C39.8,13.8,41.9,15.3,41.9,17.2z M37.1,17.2 c0-5.8-4.6-10.4-10.4-10.4s-10.4,4.6-10.4,10.4s4.6,10.4,10.4,10.4S37.1,23,37.1,17.2z" fill="var(--black-color)"/>
+        </g></symbol>
+    </svg>
+
+    <header>
+
+        <div class="head-menu">
+            <button id="open-menu"><svg class="icon"><use xlink:href="#ico-menu"/></svg></button>
+            <button id="open-search"><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
+            <a href="home.html" class="logo">ПОЛАРТ.РФ</a>
+            <div class="search"><button id="open-menu-on-pc">Найти</button></div>
+            <a class="menu-point" href="installation-department.html">Монтажный отдел</a>
+            <a class="menu-point" href="cooperation.html">Сотрудничество</a>
+            <button id="open-basket"><svg class="icon"><use xlink:href="#ico-basket"/></svg></button>
+            <button id="open-favorite"><svg class="icon"><use xlink:href="#ico-favorite"/></svg></button>
+        </div>
+
+        <div class="menu-catalog">
+            <div class="catalog-points">
+                <a class="menu-point" href="catalog.html">Ламинат</a>
+                <a class="menu-point" href="catalog.html">Кварцвинил клеевой</a>
+                <a class="menu-point" href="catalog.html">Кварцвинил замковый</a>
+                <a class="menu-point" href="catalog.html">Сопутствующие товары</a>
+                <a class="menu-point" href="news-and-promotions.html">Новости и акции</a>
+            </div>
+            <a class="header-phone" href="tel:+73832645036">+7 (383) 264-50-36</a>
+        </div>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+
+        
+
+        <div class="cooperation-content">
+            <div class="description">За 5 лет работы мы собрали для вас ассортимент исключительно качественных напольных покрытий от лучших производителей. И всегда стремимся обеспечить наших заказчиков лучшим сервисом.</div>
+
+            <div class="block">
+                <div class="title">Предлагаем сотрудничество</div>
+                <svg class="icon"><use xlink:href="#ico-cooperation-2"/></svg>
+            </div>
+
+            <div class="image">
+                <img src="img/woman-with-glasses.jpg" alt="">
+                <div>Дизайнерам</div>
+            </div>
+
+            <div class="image">
+                <img src="img/man-in-cap.jpg" alt="">
+                <div>Отделочникам</div>
+            </div>
+
+            <div class="image">
+                <img src="img/man-with-boxes.jpg" alt="">
+                <div>Поставщикам</div>
+            </div>
+
+            <div class="image">
+                <img src="img/man-in-helmet.jpg" alt="">
+                <div>Строительным фирмам</div>
+            </div>
+
+            <div class="block">
+                <svg class="icon"><use xlink:href="#ico-bonus"/></svg>
+                <span>Прогрессивная бонусная программа</span>
+            </div>
+
+            <div class="block">
+                <svg class="icon"><use xlink:href="#ico-car"/></svg>
+                <span>Бесплатная доставка образцов</span>
+            </div>
+
+            <div class="block">
+                <svg class="icon"><use xlink:href="#ico-manager"/></svg>
+                <span>Личный менеджер</span>
+            </div>
+
+            <div class="block">
+                <svg class="icon"><use xlink:href="#ico-message"/></svg>
+                <span>Сопровождение заказа на всех этапах проекта</span>
+            </div>
+
+            <div class="block">
+                <svg class="icon"><use xlink:href="#ico-learn"/></svg>
+                <span>Профессиональное обучение</span>
+            </div>
+            
+            <div class="block">
+                <svg class="icon"><use xlink:href="#ico-collections"/></svg>
+                <span>Эксклюзивные коллекции</span>
+            </div>
+            
+            <div class="block">
+                <span>Свяжитесь с нами, и мы предложим лучшее решение для Вашего проекта</span>
+                <svg class="icon"><use xlink:href="#ico-call-me"/></svg>
+            </div>
+
+            <div id="open-offer-cooperation">
+                <button>Отправить заявку</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-title-stores">Магазины</div>
+        <div class="footer-title-menu">Меню</div>
+        
+        <div class="footer-store-1">
+            <a class="footer-store__address" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">г. Новосибирск<br>Площадь К. Маркса, 6/1<br>ТВК Калейдоскоп, 1 этаж</a>
+
+            <div>График работы:<br>ежедневно, 10:00-21:00</div>
+
+            <a href="tel:+73832642036" target="_blank">+7 (383) 264-20-36</a>
+
+            <a href="https://api.whatsapp.com/send/?phone=%2B79913792329&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
+
+            <a href="https://t.me/+79913792329" target="_blank">Telegram</a>
+        </div>
+
+
+        <div class="footer-store-2">
+            <a class="footer-store__address" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">г. Новосибирск<br>​Проспект Дзержинского, 1/4<br>ТЦ Практика Уюта, 2 этаж</a>
+
+            <div>График работы:<br>ежедневно, 10:00-20:00</div>
+
+            <a href="tel:+73832631517" target="_blank">+7 (383) 263-15-17</a>
+
+            <a href="https://api.whatsapp.com/send/?phone=%2B79039001517&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
+
+            <a href="https://t.me/+79039001517" target="_blank">Telegram</a>
+        </div>
+
+        <div class="footer-menu">
+            <a href="home.html">Главная</a>
+            <a href="installation-department.html">Монтажный отдел</a>
+            <a href="cooperation.html">Сотрудничество</a>
+            <a href="news-and-promotions.html">Новости и акции</a>
+        </div>
+
+        <a class="footer-logo" href="home.html">ПОЛАРТ.РФ</a>
+    </footer>
+
+
+
+
+    <div class="modal-menu">
+
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Меню</div>
+
+        <div class="modal-menu-points">
+            <button class="point">
+                <svg class="icon"><use xlink:href="#ico-catalog"/></svg>
+                Каталог
+            </button>
+
+            <div class="modal-menu-sub-points">
+                <a href="catalog.html" class="point">Ламинат</a>
+                <a href="catalog.html" class="point">Кварцвинил клеевой</a>
+                <a href="catalog.html" class="point">Кварцвинил замковый</a>
+                <a href="catalog.html" class="point">Сопутствующие товары</a>
+            </div>
+            
+            <a href="news-and-promotions.html"  class="point">
+                <svg class="icon"><use xlink:href="#ico-tag"/></svg>
+                Новости и акции
+            </a>
+
+            <a href="installation-department.html"  class="point">
+                <svg class="icon"><use xlink:href="#ico-setting"/></svg>
+                Монтажный отдел
+            </a>
+
+            <a href="cooperation.html"  class="point">
+                <svg class="icon"><use xlink:href="#ico-cooperation"/></svg>
+                Сотрудничество
+            </a>
+
+        </div>
+
+        <div class="modal-menu-footer">
+            <a class="point" href="tel:+73832645036">Позвонить ( +7 (383) 264-50-36 )</a>
+            <a class="point" href="https://api.whatsapp.com/send/?phone=%2B79039001517&text&type=phone_number&app_absent=0">Написать WhatsApp</a>
+            <a class="point" href="https://t.me/+79913792329">Написать Telegram</a>
+            <a class="point" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">Адрес</a>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="modal-search">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Найти</div>
+
+        <div class="search-area">
+            <input type="text" placeholder="Найти">
+            <button><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
+        </div>
+        <div class="result-area">
+            <button class="open-card-viewer">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </button>
+
+            <button class="open-card-viewer">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </button>
+
+            <button class="open-card-viewer">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal-favorite">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Избранное</div>
+        <div class="cards">
+            <script>
+                function createCard (parent){
+                    // функция для размножения карточек 
+                    // нужна на стадии макета
+        
+                    const card = `
+                        <button class="card open-card-viewer">
+                            <div class="card-img">
+                                <img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt="">
+                                <div class="props">
+                                    <div class="prop-thickness">
+                                        <div><img src="img/thickness.png" alt=""></div>
+                                        <div>3,55 мм</div>
+                                    </div>
+                                    <div class="prop-overlay">
+                                        <div><img src="img/overlay.png" alt=""></div>
+                                        <div>0,6 мм</div>
+                                    </div>
+                                    <div class="prop-class">
+                                        <div>43</div>
+                                        <div>класс</div>
+                                    </div>
+                                    <div class="prop-thickness">
+                                        <div>4v</div>
+                                        <div>фаска</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-title">Decoria Mild Tile Дуб Жанто Дуб Жанто Дуб Жанто Дуб Жанто</div>
+                            <div class="card-category">Кварцвинил клеевой</div>
+                            <div class="card-price">1140</div>
+                        </button>
+                    `
+                    parent.insertAdjacentHTML('afterbegin', card);
+                }
+                const modalFavorite = document.querySelector(".modal-favorite > .cards")
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+            </script>
+        </div>
+    </div>
+
+
+
+    <div class="modal-basket">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Корзина</div>
+
+        <div class="backet-cards">
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="full-price">12345</div>
+        </div>
+
+        <button id="open-checkout">Оформить заказ</button>
+
+    </div>
+
+
+    <div class="modal-checkout">
+        <div class="pop-up">
+
+            <div class="title">Оформление заказа</div>
+
+            <input class="your-name" type="text" placeholder="Имя">
+
+            <div class="phone">
+                <div>+7</div><input type="tel" placeholder="Телефон">
+            </div>
+            
+            <div class="description">
+                Заполните все поля формы и нажмите "Заказать". После оформления заказа мы свяжемся с Вами для уточнения деталей
+            </div>
+
+            <div class="send-order"><button id="send-order">Заказать</button></div>
+            
+        </div>
+    </div>
+
+
+    <div class="modal-card-viewer">
+
+        <div class="pop-up">
+
+            <button class="pop-up-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+
+            <div class="image-slider">
+                <div class="image-slider-list">
+                    <div><img src="img/egger-epl-051-1.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-2.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="about">
+
+            
+                <button id="set-favorite"><svg class="icon"><use xlink:href="#ico-favorite"/></svg></button>
+
+                <div class="title">Fargo Comfort Дуб Лондонский Туман Дуб Лондонский Туман</div>
+
+                <div class="category">Кварцвинил замковый</div>
+
+                <div class="props">
+                    <div class="prop-thickness">
+                        <div><img src="img/thickness.png" alt=""></div>
+                        <div>3,55 мм</div>
+                    </div>
+                    <div class="prop-overlay">
+                        <div><img src="img/overlay.png" alt=""></div>
+                        <div>0,6 мм</div>
+                    </div>
+                    <div class="prop-class">
+                        <div>43</div>
+                        <div>класс</div>
+                    </div>
+                    <div class="prop-thickness">
+                        <div>4v</div>
+                        <div>фаска</div>
+                    </div>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+
+                <button class="add-in-basket">В корзину</button>
+
+                <div class="description">
+                    Fargo Comfort - это коллекция декоров замкового SPC-ламината, качественно имитирующих благородные породы дуба. Микрофаска придаёт ламелям сходство с натуральным покрытием: древесной или инженерной доской. Уникальные дизайны с контрастными переходами, выраженными сучками и прожилками помогут вам создать уютный интерьер.
+                </div>
+
+                <div id="open-all-props">Технические характеристики</div>
+
+                <div class="list-with-all-props">
+                    <span>Толщина: 4 мм</span>
+                    <span>Защитный слой: 0,5 мм</span>
+                    <span>Класс: 43</span>
+                    <span>Фаска: микро</span>
+                    <span>Размер плашки: 950x184 мм</span>
+                    <span>Дизайн: дерево</span>
+                    <span>ECO класс: E1</span>
+                    <span>Тиснение: Синхронное тиснение</span>
+                    <span>Пожарная безопасность: KM2</span>
+                    <span>Вес упаковки: 18,5 кг.</span>
+                    <span>Квадратура упаковки: 2,2 м2</span>
+                    <span>Встроенная подложка: нет</span>
+                    <span>Рекомендованная подложка: 1,5 мм</span>
+                    <span>Бренд: Fargo</span>
+                    <span>Коллекция: Comfort</span>
+                    <span>Страна: Китай</span>
+                    <span>Артикул: 81996-14</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-cooperation">
+        <div class="pop-up">
+
+            <div class="title">Заявка на сотрудничество</div>
+
+            <input class="your-name" type="text" placeholder="Имя">
+
+            <div class="combobox how-are-you">
+                <button class="selected">
+                    <span>Дизайнер</span>
+                    <svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg>
+                </button>
+                <div class="options">
+                    <button class="point">Дизайнер</a>
+                    <button class="point">Строительная компания</button>
+                    <button class="point">Отделочник</button>
+                    <button class="point">Поставщик</button>
+                    <button class="point">другое …</button>
+                </div>
+            </div>
+
+            <div class="phone">
+                <div>+7</div><input type="tel" placeholder="Телефон">
+            </div>
+            
+            <div class="send-order"><button id="send-order">Заказать</button></div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ПОЛАРТ.РФ | Главная</title>
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/variables.css">
+    <link rel="stylesheet" type="text/css" href="css/cards.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/modal-windows.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/carusel.css">
+    <link rel="stylesheet" type="text/css" href="css/page-catalog-content.css">
+    <link rel="stylesheet" type="text/css" href="css/image-slider.css">
+
+    <script src="js/sprite-svg.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/carusel.js" defer></script>
+    <script src="js/cards.js" defer></script>
+    <!-- <script src="js/combo-box.js" defer></script> -->
+    <script src="js/image-slider.js" defer></script>
+
+    <script>
+        const currentPage = "Кварцвинил клеевой"
+    </script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    
+    <header>
+
+        <div class="head-menu">
+            <button id="open-menu"><svg class="icon"><use xlink:href="#ico-menu"/></svg></button>
+            <button id="open-search"><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
+            <a href="home.html" class="logo">ПОЛАРТ.РФ</a>
+            <div class="search"><button id="open-menu-on-pc">Найти</button></div>
+            <a class="menu-point" href="installation-department.html">Монтажный отдел</a>
+            <a class="menu-point" href="cooperation.html">Сотрудничество</a>
+            <button id="open-basket"><svg class="icon"><use xlink:href="#ico-basket"/></svg></button>
+            <button id="open-favorite"><svg class="icon"><use xlink:href="#ico-favorite"/></svg></button>
+        </div>
+
+        <div class="menu-catalog">
+            <div class="catalog-points">
+                <a class="menu-point" href="catalog.html">Ламинат</a>
+                <a class="menu-point" href="catalog.html">Кварцвинил клеевой</a>
+                <a class="menu-point" href="catalog.html">Кварцвинил замковый</a>
+                <a class="menu-point" href="catalog.html">Сопутствующие товары</a>
+                <a class="menu-point" href="news-and-promotions.html">Новости и акции</a>
+            </div>
+            <a class="header-phone" href="tel:+73832645036">+7 (383) 264-50-36</a>
+        </div>
+
+        <script>
+            // выбор активированного каталога
+            document.querySelectorAll(".menu-catalog > .catalog-points > .menu-point").forEach(point => {
+                if (point.innerText === currentPage) {
+                    point.classList.add("active")
+                }
+            })
+        </script>
+
+        <div class="catalog-navigaror">
+
+            <div class="selected-catalog">
+                <script>
+                    const selectedCatalog = document.querySelector(".selected-catalog")
+                    selectedCatalog.innerText = currentPage
+                </script>
+            </div>
+
+            <div class="combobox menu-catalog-manufacturer">
+                <button class="selected">
+                    <span>Alpine Floor</span>
+                    <svg class="icon"><use xlink:href="#ico-angular-arrow"/></svg>
+                </button>
+                <div class="options">
+                    <a href="catalog.html" class="point">Alpine Floor</a>
+                    <a href="catalog.html" class="point">AltaStep</a>
+                    <a href="catalog.html" class="point">Aquamax</a>
+                    <a href="catalog.html" class="point">Art East</a>
+                    <a href="catalog.html" class="point">AspenFloor</a>
+                    <a href="catalog.html" class="point">Clix Floor</a>
+                    <a href="catalog.html" class="point">CronaFloor</a>
+                    <a href="catalog.html" class="point">DeART</a>
+                    <a href="catalog.html" class="point">Fargo</a>
+                    <a href="catalog.html" class="point">Fine floor</a>
+                    <a href="catalog.html" class="point">Floorwood</a>
+                    <a href="catalog.html" class="point">Home Expert</a>
+                    <a href="catalog.html" class="point">Natura</a>
+                    <a href="catalog.html" class="point">Norland</a>
+                    <a href="catalog.html" class="point">One Floor</a>
+                    <a href="catalog.html" class="point">Respect</a>
+                    <a href="catalog.html" class="point">StoneWood</a>
+                </div>
+            </div>
+            
+            <div class="btns">
+                <button class="sort-by-price">
+                    <svg class="icon"><use xlink:href="#ico-arrow"/></svg>
+                    По цене
+                </button>
+                <button class="open-filters-by-catalog">
+                    <svg class="icon"><use xlink:href="#ico-filter"/></svg>
+                    Фильтры
+                </button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+                <div class="title">Толщина покрытия</div>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">4,5 мм</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">4 мм</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">3,5мм</span>
+                </label>
+                <div class="title">Защитный слой</div>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">0,6 мм</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">0,3 мм</span>
+                </label>
+                <div class="title">Класс</div>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">43</span>
+                </label>
+                <div class="title">Фаска</div>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">4v</span>
+                </label>
+                <div class="title">Дизайн</div>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">камень</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">дерева</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">ёлочка</span>
+                </label>
+                <div class="title">Встроенная подложка</div>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="text">нет</span>
+                </label>
+                <button class="set-filters">Применить</button>
+            </div>
+            
+        </div>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+        <div class="catalog-baord-cards"></div>
+        <script>
+            function createCard (parent){
+                // функция для размножения карточек 
+                // нужна на стадии макета
+    
+                const card = `
+                    <button class="card open-card-viewer">
+                        <div class="card-img">
+                            <img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt="">
+                            <div class="props">
+                                <div class="prop-thickness">
+                                    <div><img src="img/thickness.png" alt=""></div>
+                                    <div>3,55 мм</div>
+                                </div>
+                                <div class="prop-overlay">
+                                    <div><img src="img/overlay.png" alt=""></div>
+                                    <div>0,6 мм</div>
+                                </div>
+                                <div class="prop-class">
+                                    <div>43</div>
+                                    <div>класс</div>
+                                </div>
+                                <div class="prop-thickness">
+                                    <div>4v</div>
+                                    <div>фаска</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-title">Decoria Mild Tile Дуб Жанто Дуб Жанто Дуб Жанто Дуб Жанто</div>
+                        <div class="card-category">Кварцвинил клеевой</div>
+                        <div class="card-price">1140</div>
+                    </button>
+                `
+                parent.insertAdjacentHTML('afterbegin', card);
+            }
+
+            const maincontent = document.querySelector(".catalog-baord-cards")
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+            createCard(maincontent)
+        </script>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-title-stores">Магазины</div>
+        <div class="footer-title-menu">Меню</div>
+        
+        <div class="footer-store-1">
+            <a class="footer-store__address" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">г. Новосибирск<br>Площадь К. Маркса, 6/1<br>ТВК Калейдоскоп, 1 этаж</a>
+
+            <div>График работы:<br>ежедневно, 10:00-21:00</div>
+
+            <a href="tel:+73832642036" target="_blank">+7 (383) 264-20-36</a>
+
+            <a href="https://api.whatsapp.com/send/?phone=%2B79913792329&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
+
+            <a href="https://t.me/+79913792329" target="_blank">Telegram</a>
+        </div>
+
+
+        <div class="footer-store-2">
+            <a class="footer-store__address" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">г. Новосибирск<br>​Проспект Дзержинского, 1/4<br>ТЦ Практика Уюта, 2 этаж</a>
+
+            <div>График работы:<br>ежедневно, 10:00-20:00</div>
+
+            <a href="tel:+73832631517" target="_blank">+7 (383) 263-15-17</a>
+
+            <a href="https://api.whatsapp.com/send/?phone=%2B79039001517&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>
+
+            <a href="https://t.me/+79039001517" target="_blank">Telegram</a>
+        </div>
+
+        <div class="footer-menu">
+            <a href="home.html">Главная</a>
+            <a href="installation-department.html">Монтажный отдел</a>
+            <a href="cooperation.html">Сотрудничество</a>
+            <a href="news-and-promotions.html">Новости и акции</a>
+        </div>
+
+        <a class="footer-logo" href="home.html">ПОЛАРТ.РФ</a>
+    </footer>
+
+
+
+
+    <div class="modal-menu">
+
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Меню</div>
+
+        <div class="modal-menu-points">
+            <button class="point">
+                <svg class="icon"><use xlink:href="#ico-catalog"/></svg>
+                Каталог
+            </button>
+
+            <div class="modal-menu-sub-points">
+                <a href="catalog.html" class="point">Ламинат</a>
+                <a href="catalog.html" class="point">Кварцвинил клеевой</a>
+                <a href="catalog.html" class="point">Кварцвинил замковый</a>
+                <a href="catalog.html" class="point">Сопутствующие товары</a>
+            </div>
+            
+            <a href="news-and-promotions.html"  class="point">
+                <svg class="icon"><use xlink:href="#ico-tag"/></svg>
+                Новости и акции
+            </a>
+
+            <a href="installation-department.html"  class="point">
+                <svg class="icon"><use xlink:href="#ico-setting"/></svg>
+                Монтажный отдел
+            </a>
+
+            <a href="cooperation.html"  class="point">
+                <svg class="icon"><use xlink:href="#ico-cooperation"/></svg>
+                Сотрудничество
+            </a>
+
+        </div>
+
+        <div class="modal-menu-footer">
+            <a class="point" href="tel:+73832645036">Позвонить ( +7 (383) 264-50-36 )</a>
+            <a class="point" href="https://api.whatsapp.com/send/?phone=%2B79039001517&text&type=phone_number&app_absent=0">Написать WhatsApp</a>
+            <a class="point" href="https://t.me/+79913792329">Написать Telegram</a>
+            <a class="point" href="https://2gis.ru/novosibirsk/search/%D0%BF%D0%BE%D0%BB%D0%B0%D1%80%D1%82/firm/70000001034568593" target="_blank">Адрес</a>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="modal-search">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Найти</div>
+
+        <div class="search-area">
+            <input type="text" placeholder="Найти">
+            <button><svg class="icon"><use xlink:href="#ico-search"/></svg></button>
+        </div>
+        <div class="result-area">
+            <button class="open-card-viewer">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </button>
+
+            <button class="open-card-viewer">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </button>
+
+            <button class="open-card-viewer">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <div class="title">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</div>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal-favorite">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Избранное</div>
+        <div class="cards">
+            <script>
+                const modalFavorite = document.querySelector(".modal-favorite > .cards")
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+                createCard(modalFavorite)
+            </script>
+        </div>
+    </div>
+
+
+
+    <div class="modal-basket">
+        <button class="modal-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+        <div class="modal-title">Корзина</div>
+
+        <div class="backet-cards">
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="backet-card" lot-price="3450.50" square="1.85">
+                <div class="image"><img src="img/0ddcc5537529085d76159c9a946415c2.jpeg" alt=""></div>
+                <button class="title open-card-viewer">Кварцвинил замковый Respect Композитный ламинат Дуб Белый</button>
+
+                <div class="counter">
+                    <button class="increment">-</button>
+                    <input class="visible" type="number" maxlength="3" value="1"></input>
+                    <button class="decrement">+</button>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+                
+                <button class="delete"><svg class="icon"><use xlink:href="#ico-del"/></svg></button>
+            </div>
+
+            <div class="full-price">12345</div>
+        </div>
+
+        <button id="open-checkout">Оформить заказ</button>
+
+    </div>
+
+
+    <div class="modal-checkout">
+        <div class="pop-up">
+
+            <div class="title">Оформление заказа</div>
+
+            <input class="your-name" type="text" placeholder="Имя">
+
+            <div class="phone">
+                <div>+7</div><input type="tel" placeholder="Телефон">
+            </div>
+            
+            <div class="description">
+                Заполните все поля формы и нажмите "Заказать". После оформления заказа мы свяжемся с Вами для уточнения деталей
+            </div>
+
+            <div class="send-order"><button id="send-order">Заказать</button></div>
+            
+        </div>
+    </div>
+
+
+    <div class="modal-card-viewer">
+
+        <div class="pop-up">
+
+            <button class="pop-up-close"><svg class="icon"><use xlink:href="#ico-close"/></svg></button>
+
+            <div class="image-slider">
+                <div class="image-slider-list">
+                    <div><img src="img/egger-epl-051-1.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-2.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                    <div><img src="img/egger-epl-051-3.jpg" alt=""></div>
+                </div>
+            </div>
+
+            <div class="about">
+
+            
+                <button id="set-favorite"><svg class="icon"><use xlink:href="#ico-favorite"/></svg></button>
+
+                <div class="title">Fargo Comfort Дуб Лондонский Туман Дуб Лондонский Туман</div>
+
+                <div class="category">Кварцвинил замковый</div>
+
+                <div class="props">
+                    <div class="prop-thickness">
+                        <div><img src="img/thickness.png" alt=""></div>
+                        <div>3,55 мм</div>
+                    </div>
+                    <div class="prop-overlay">
+                        <div><img src="img/overlay.png" alt=""></div>
+                        <div>0,6 мм</div>
+                    </div>
+                    <div class="prop-class">
+                        <div>43</div>
+                        <div>класс</div>
+                    </div>
+                    <div class="prop-thickness">
+                        <div>4v</div>
+                        <div>фаска</div>
+                    </div>
+                </div>
+
+                <div class="square">1.85м²</div>
+                <div class="price">3450.50 ₽</div>
+
+                <button class="add-in-basket">В корзину</button>
+
+                <div class="description">
+                    Fargo Comfort - это коллекция декоров замкового SPC-ламината, качественно имитирующих благородные породы дуба. Микрофаска придаёт ламелям сходство с натуральным покрытием: древесной или инженерной доской. Уникальные дизайны с контрастными переходами, выраженными сучками и прожилками помогут вам создать уютный интерьер.
+                </div>
+
+                <div id="open-all-props">Технические характеристики</div>
+
+                <div class="list-with-all-props">
+                    <span>Толщина: 4 мм</span>
+                    <span>Защитный слой: 0,5 мм</span>
+                    <span>Класс: 43</span>
+                    <span>Фаска: микро</span>
+                    <span>Размер плашки: 950x184 мм</span>
+                    <span>Дизайн: дерево</span>
+                    <span>ECO класс: E1</span>
+                    <span>Тиснение: Синхронное тиснение</span>
+                    <span>Пожарная безопасность: KM2</span>
+                    <span>Вес упаковки: 18,5 кг.</span>
+                    <span>Квадратура упаковки: 2,2 м2</span>
+                    <span>Встроенная подложка: нет</span>
+                    <span>Рекомендованная подложка: 1,5 мм</span>
+                    <span>Бренд: Fargo</span>
+                    <span>Коллекция: Comfort</span>
+                    <span>Страна: Китай</span>
+                    <span>Артикул: 81996-14</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

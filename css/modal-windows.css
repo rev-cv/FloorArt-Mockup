@@ -54,6 +54,7 @@
 .modal-search,
 .modal-basket,
 .modal-checkout,
+.modal-cooperation,
 .modal-favorite,
 .modal-card-viewer {
     position: fixed;
@@ -487,11 +488,9 @@
 
 
 
-
 .modal-checkout {
     /* display: flex;
     opacity: 1; */
-
 
     transform: translateY(0);
     justify-content: center;
@@ -516,7 +515,6 @@
     overflow: hidden;
     padding: 0 1em 1em 1em;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
-
 
     opacity: 0;
     transform: translateY(-55%);
@@ -840,4 +838,164 @@
     }
 
     
+}
+
+
+
+
+
+
+.modal-cooperation {
+    /* display: flex;
+    opacity: 1; */
+
+
+    transform: translateY(0);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-color-50);
+    /* backdrop-filter: blur(6px); */
+    backdrop-filter: blur(0px);
+    z-index: 30;
+
+    transition: all 600ms ease;
+}
+
+.modal-cooperation > .pop-up {
+    min-width: 300px;
+    max-width: 22em;
+    max-height: 22em;
+    /* background-color: yellowgreen; */
+    background-color: var(--white-color);
+    margin: 1em;
+    transform: translateY(-40%);
+    border-radius: .25em;
+    /* overflow: hidden; */
+    padding: 0 1em 1em 1em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+
+
+    opacity: 0;
+    transform: translateY(-55%);
+    transition: all 300ms ease;
+}
+
+.modal-cooperation > .pop-up > .title {
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    padding: 1em;
+
+}
+
+.modal-cooperation > .pop-up > .how-are-you > .selected,
+.modal-cooperation > .pop-up > .your-name,
+.modal-cooperation > .pop-up > .phone > div,
+.modal-cooperation > .pop-up > .phone > input {
+    font-size: .8em;
+    border: 1px solid var(--gray-border-color);
+    padding: .7em .8em;
+    border-radius: .25em;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    display: flex;
+    align-items: center;
+    margin: .5em 0;
+}
+
+.modal-cooperation > .pop-up > .phone {
+    display: flex;
+}
+
+.modal-cooperation > .pop-up > .phone > div {
+    margin-right: 0.8em;
+}
+
+.modal-cooperation > .pop-up > .phone > input{
+    flex-grow: 1;
+}
+
+.modal-cooperation > .pop-up > .how-are-you {
+    position: relative;
+}
+
+.modal-cooperation > .pop-up > .how-are-you > .options {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+    font-size: .9em;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0 0 .25em .25em;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+
+    height: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.modal-cooperation > .pop-up > .how-are-you > .show { /*.options*/
+    height: calc((.8em + .7em + .7em) * 5);
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.modal-cooperation > .pop-up > .how-are-you > .options > .point {
+    font-size: .8em;
+    white-space: nowrap;
+    color: var(--black-color);
+    padding: .7em;
+    font-weight: 500;
+    opacity: .9;
+    background-color: transparent;
+    text-align: left;
+    transition: background-color 300ms ease;
+}
+
+.modal-cooperation > .pop-up > .how-are-you > .options > .point:hover {
+    background-color: var(--gray-border-color);
+}
+
+.modal-cooperation > .pop-up > .how-are-you > .selected{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+}
+
+.modal-cooperation > .pop-up > .how-are-you > .selected > span {
+    color:  var(--black-color);
+}
+
+.modal-cooperation > .pop-up > .how-are-you > .selected > svg {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.modal-cooperation > .pop-up > .your-name {
+    width: 100%;
+}
+
+.modal-cooperation > .pop-up > .description {
+    font-size: .8em;
+    color: var(--black-color);
+    padding: 1em 0;
+    line-height: 1.3em;
+    opacity: .8;
+}
+
+.modal-cooperation > .pop-up > .send-order {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-cooperation > .pop-up > .send-order > #send-order {
+    margin: 0;
 }

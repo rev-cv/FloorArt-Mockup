@@ -4,6 +4,7 @@ const favorite = document.querySelector(".modal-favorite")
 const basket = document.querySelector(".modal-basket")
 const checkout = document.querySelector(".modal-checkout")
 const cardviewer = document.querySelector(".modal-card-viewer")
+const cooperation = document.querySelector(".modal-cooperation")
 
 let modalLevel = 0;
 
@@ -94,7 +95,6 @@ function closeModalWidows(event){
 }
 
 
-
 document.querySelector("#open-menu").onclick = () => openModalWidows(menu);
 document.querySelector("#open-search").onclick = () => openModalWidows(search);
 document.querySelector("#open-basket").onclick = () => openModalWidows(basket);
@@ -113,3 +113,90 @@ document.querySelectorAll(".modal-card-viewer > .pop-up > .pop-up-close").forEac
     elem.onclick = () => closePopUp(cardviewer);
 })
 
+
+const menuCatalogManufacturer = document.querySelector(".menu-catalog-manufacturer")
+if (menuCatalogManufacturer !== null){
+    menuCatalogManufacturer.onclick = event => {
+        event.currentTarget.parentNode
+            .querySelector(".options")
+            .classList.toggle("show")
+    };
+}
+
+
+document.addEventListener('click', (event) => {
+    const a = !event.target.matches(".menu-catalog-manufacturer > .selected")
+    const b = !event.target.matches(".menu-catalog-manufacturer > .selected > span")
+    const c = !event.target.matches(".menu-catalog-manufacturer > .selected > svg")
+
+    if(a & b & c) {
+        document.querySelectorAll(".menu-catalog-manufacturer > .options").forEach( elem => {
+            elem.classList.remove("show")
+        })
+    } 
+
+    // let ct = event.target;
+    // while (ct) {
+        
+    //     if (ct.tagName.toLowerCase() === 'html'){
+    //         return
+    //     } else if (!ct.matches('.filters')) {
+    //         document.querySelectorAll("header > .catalog-navigaror > .filters").forEach( elem => {
+    //             elem.classList.remove("show")
+    //         })
+    //         return
+    //     }
+    //     ct = ct.parentNode; 
+    // }
+}) 
+
+
+const sortByPrice = document.querySelector(".catalog-navigaror > .btns > .sort-by-price")
+if (sortByPrice !== null){
+    sortByPrice.onclick = event => {
+        event.currentTarget.classList.toggle("reverse")
+    }
+}
+
+
+
+const openFiltersByCatalog = document.querySelector(".open-filters-by-catalog")
+if (openFiltersByCatalog !== null){
+    openFiltersByCatalog.onclick = event => {
+        event.currentTarget.parentNode.parentNode
+            .querySelector(".filters")
+            .classList.toggle("show")
+    }
+}
+
+const fFilterClose = document.querySelector(".filters > .filter-close")
+if (fFilterClose !== null){
+    fFilterClose.onclick = event => {
+        event.currentTarget.parentNode.classList.remove("show")
+    }
+}   
+
+
+if (cooperation !== null){
+
+    document.querySelector("#open-offer-cooperation > button").onclick = () => {
+        openPopUp(cooperation, true)
+    }
+
+    cooperation.onclick = () => closePopUp(cooperation);
+
+    document.querySelector(".how-are-you > .selected").onclick = event => {
+        event.currentTarget.parentNode.querySelector('.options').classList.toggle("show")
+    }
+
+    document.querySelectorAll(".how-are-you > .options > .point").forEach( btn => {
+        
+        btn.onclick = event => {
+            const selected = event.currentTarget.parentNode.parentNode.querySelector(".selected > span");
+            event.currentTarget.parentNode.classList.remove("show")
+            selected.innerText = event.currentTarget.innerText;
+        }
+    })
+
+
+}

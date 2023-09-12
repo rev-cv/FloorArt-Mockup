@@ -4,6 +4,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 .block-in-main {
@@ -65,117 +66,6 @@ main {
     display: none;
 }
 
-.card {
-    font-size: 1em;
-    min-width: 16.5em;
-    max-width: 16.5em;
-    height: 22em;
-    box-shadow: 4px 4px 8px 0px var(--gray-color);
-    background-color: var(--white-color);
-    padding: 0.3em;
-    user-select: none;
-    overflow: hidden;
-    border-radius: 4px;
-    margin-right: 1em;
-    transition: box-shadow 300ms ease;
-}
-
-.card:hover {
-    box-shadow: 8px 8px 8px 0px var(--gray-color);
-}
-
-.card > .card-img {
-    width: 16.5em;
-    height: 16.5em;
-    margin: -.3em -.3em 0 -.3em;
-    position: relative;
-}
-
-.props {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-
-}
-
-.props > div {
-    width: 2.25em;
-    height: 2.25em;
-    background-color: var(--white-color);
-    border-radius: .25em;
-    margin: .25em .125em;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.props > div > div:first-child {
-    font-size: .65em;
-    font-weight: 600;
-    color: var(--black-color);
-}
-
-.props > div > div > img {
-    width: 1.6em;
-    height: 1.6em;
-}
-
-.props > div > div:last-child {
-    font-size: .45em;
-    font-weight: 500;
-    color: var(--black-color);
-    padding-top: 0.4em;
-}
-
-.card > .card-img > img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.card > .card-title {
-    color: var(--black-color);
-    font-weight: 500;
-    padding-top: 1em;
-    white-space: nowrap;
-    position: relative;
-    text-align: left;
-}
-
-.card > .card-title::before{
-    content: "";
-    background: linear-gradient(90deg, transparent 0%, var(--white-color) 100%);;
-    position: absolute;
-    top: 0;
-    right: -.3em;
-    bottom: -1em;
-    width: 1.8em;
-}
-
-.card > .card-category {
-    font-size: .7em;
-    color: var(--black-color);
-    padding: .8em 0;
-    text-align: left;
-}
-
-.card > .card-price {
-    color: var(--gray-color);
-    font-weight: 600;
-    text-align: left;
-}
-
-.card > .card-price::after {
-    content: "₽/м²";
-    margin-left: .4em;
-}
-
-
-
-
 .main-popular-categories > .categories{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -207,7 +97,7 @@ main {
     bottom: 0;
     right: 0;
     left: 0;
-    background: radial-gradient(circle, rgba(41,41,41,0.9) 0%, rgba(41,41,41,0.7) 100%);;
+    background: radial-gradient(circle, rgba(41,41,41,0.9) 0%, rgba(41,41,41,0.7) 100%);
     z-index: 2;
     transition: opacity 300ms ease;
 }
@@ -228,7 +118,6 @@ main {
     right: 0;
     left: 0;
     z-index: 3;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,7 +125,6 @@ main {
     padding: 1em;
     text-align: center;
     transition: all 300ms ease;
-
     line-height: 1.6em;
     font-weight: 500;
     opacity: .9;
@@ -257,16 +145,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin: 2em 0 ;
 }
 
 .main-answers-on-questions{
     background: linear-gradient(180deg, rgba(207,195,223,1) 0%, rgba(227,227,227,1) 100%);
     grid-template-columns: minmax(0, 1fr) 5fr minmax(0, 1fr);
-
     display: grid;
-
 }
 
 
@@ -305,28 +190,20 @@ main {
     height: 2em;
 }
 
-
 .combobox > .combobox-selection {
     position: absolute;
     top: 100%;
     right: 0;
     left: 0;
-
     background-color: var(--white-color);
-
     display: flex;
     flex-direction: column;
-
     border-radius: 0 0 .25em .25em;
-
     transform-origin: top;
     transform: scaleY(0);
     opacity: 0;
-
     transition: all 300ms ease;
-
     overflow: hidden;
-
     z-index: 2;
     box-shadow: 0px 4px 8px 0px var(--gray-color);
 }
@@ -337,9 +214,7 @@ main {
     color: var(--black-color);
     padding: .5em 1em;
     text-align: left;
-
     transition: all 100ms ease;
-
     cursor: default;
 }
 
@@ -414,16 +289,10 @@ main {
 .board-answers > .answer > .question {
     font-weight: 500;
     color: var(--black-color);
-    /* margin-bottom: 1em; */
-
     height: 2em;
-
     display: flex;
     align-items: center;
-
 }
-
-
 
 .main-reviews > .board-reviews {
     display: grid;
@@ -451,13 +320,11 @@ main {
 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 
     font-size: .84em;
     line-height: 1.2em;
     color: var(--black-color);
     margin-top: 1em;
-
 }
 
 .main-reviews > .board-reviews > .review > .avatar {
@@ -487,8 +354,6 @@ main {
 .main-reviews > .board-reviews > .review > .name {
     margin-top: .6em;
     color: var(--black-color);
-
-
 }
 
 

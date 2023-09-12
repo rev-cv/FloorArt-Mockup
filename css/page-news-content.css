@@ -1,0 +1,62 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.promotion-cards {
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.promotion-cards > .promo-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    padding: 1em;
+    border: 1px solid var(--gray-border-color);
+    background-color: var(--white-color);
+    border-radius: .25em;
+    margin-bottom: 1em;
+    max-width: 30em;
+}
+
+.promotion-cards > .promo-card > .title {
+    grid-column: 1 / -1;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.promotion-cards > .promo-card > .image {
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+.promotion-cards > .promo-card > .image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promotion-cards > .promo-card > .description {
+    font-size: 0.8em;
+    line-height: 1.3em;
+    color: var(--black-color);
+}
+
+@media (max-width: 650px) {
+    .promotion-cards > .promo-card {
+        grid-template-columns: 1fr;
+    }
+
+    .promotion-cards {
+        padding: .2em;
+    }
+}
