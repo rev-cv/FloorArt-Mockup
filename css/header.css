@@ -276,11 +276,13 @@ header > .catalog-navigaror > .filters > .set-filters:hover {
 
 #open-favorite {
     fill: transparent;
-    stroke: var(--black-color)
+    stroke: var(--black-color);
+    position: relative;
 }
 
 #open-basket {
     margin-left: 1em;
+    position: relative;
 }
 
 #open-basket > svg,
@@ -312,6 +314,23 @@ header > .catalog-navigaror > .filters > .set-filters:hover {
 #open-basket:hover > svg,
 #open-favorite:hover > svg {
     opacity: 1;
+}
+
+#open-favorite > .counter,
+#open-basket > .counter {
+    border-radius: 50%;
+    color: white;
+    font-weight: 900;
+    background-color: red;
+    font-size: .5em;
+    position: absolute;
+    width: 1.7em;
+    height: 1.7em;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #open-menu,
@@ -389,6 +408,7 @@ header > .catalog-navigaror > .filters > .set-filters:hover {
         transition: background-color 300ms var(--gray-border-color);
         padding: .6em 1em;
         margin: 0;
+        display: block;
     }
 
     header > .catalog-navigaror > .menu-catalog-manufacturer > .options > .point:hover {
@@ -422,7 +442,7 @@ header > .catalog-navigaror > .filters > .set-filters:hover {
         text-align: center;
         margin: 0;
         font-size: .8em;
-        pointer-events: none;
+        /* pointer-events: none; */
     }
     
     header > .head-menu {

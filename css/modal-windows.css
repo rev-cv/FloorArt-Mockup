@@ -42,7 +42,7 @@
     color: var(--black-color);
     opacity: .15;
     font-weight: 500;
-    filter: blur(1px)
+    /* filter: blur(1px) */
 }
 
 

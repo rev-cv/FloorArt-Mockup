@@ -8,6 +8,7 @@ const cooperation = document.querySelector(".modal-cooperation")
 
 let modalLevel = 0;
 
+
 function openPopUp(element, isShiftY){
     element.style.display = "flex";
     setTimeout(()=>{
@@ -34,7 +35,12 @@ function openPopUp(element, isShiftY){
     };
 
     modalLevel += 1;
+
+    if (element.classList.contains("modal-card-viewer")){
+        element.querySelector(".about").scrollTop = 0;
+    }
 }
+
 
 function closePopUp(element, isShiftY){
     const popup = element.querySelector(".pop-up")
@@ -79,6 +85,7 @@ function openModalWidows(element){
 
     modalLevel += 1;
 }
+
 
 function closeModalWidows(event){
     const modal = event.currentTarget.parentNode
@@ -134,20 +141,6 @@ document.addEventListener('click', (event) => {
             elem.classList.remove("show")
         })
     } 
-
-    // let ct = event.target;
-    // while (ct) {
-        
-    //     if (ct.tagName.toLowerCase() === 'html'){
-    //         return
-    //     } else if (!ct.matches('.filters')) {
-    //         document.querySelectorAll("header > .catalog-navigaror > .filters").forEach( elem => {
-    //             elem.classList.remove("show")
-    //         })
-    //         return
-    //     }
-    //     ct = ct.parentNode; 
-    // }
 }) 
 
 
@@ -159,7 +152,6 @@ if (sortByPrice !== null){
 }
 
 
-
 const openFiltersByCatalog = document.querySelector(".open-filters-by-catalog")
 if (openFiltersByCatalog !== null){
     openFiltersByCatalog.onclick = event => {
@@ -168,6 +160,7 @@ if (openFiltersByCatalog !== null){
             .classList.toggle("show")
     }
 }
+
 
 const fFilterClose = document.querySelector(".filters > .filter-close")
 if (fFilterClose !== null){
@@ -197,6 +190,30 @@ if (cooperation !== null){
             selected.innerText = event.currentTarget.innerText;
         }
     })
+}
 
 
+// ↓ код скрывает / открывает панель навигации в каталоге
+var prevScrollpos = window.scrollY;
+const catalogNavigator = document.querySelector(".catalog-navigaror")
+window.onscroll = function() {
+
+    if (catalogNavigator === null){
+        return
+    }
+
+    if (700 < window.innerWidth) {
+        catalogNavigator.style.display = "";
+        return
+    }
+
+    var currentScrollPos = window.scrollY;
+    
+    if (prevScrollpos > currentScrollPos) {
+        catalogNavigator.style.display = "";
+    } else {
+        catalogNavigator.style.display = "none";
+    }
+    
+    prevScrollpos = currentScrollPos;
 }
